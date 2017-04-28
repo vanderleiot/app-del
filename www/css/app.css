@@ -101,7 +101,7 @@ position:relative;
 .page--menu-page__background {
 /*background-color: #333;
 color: white;*/
-/*background-color:#FA00A3; color:#FA00A3;*/
+*background-color:#FA00A3; color:#FA00A3;*
 background-color:#FFFC31;
 color:#333;
 }
@@ -218,7 +218,7 @@ address,
 #page-booking-ty .wrapper p,
 .settings-list
 {
-line-height:2;
+line-height:0,5;
 font-size:14px;
 color:#666;
 margin:8px 0;
@@ -278,7 +278,7 @@ padding-left:8px;
 }
 
 .restaurant-list .list-item-container:nth-child(even){
-/*background:#FF09BE;*/
+background:#FF09BE;
 }
 .notification.open,
 .notification.pre-order
