@@ -20,7 +20,7 @@
 	<preference name="android-build-tool" value="gradle" />	
 		
 	<gap:plugin name="cordova-plugin-whitelist" source="npm" spec="1.3.1"/>
-    <gap:plugin name="cordova-plugin-device" spec="1.1.4" />
+    <gap:plugin name="cordova-plugin-device" source="npm" spec="1.1.4" />
     <gap:plugin name="com.paypal.cordova.mobilesdk" source="npm" spec="3.4.0" />            	
     <gap:plugin name="cordova-plugin-device" source="npm" spec="1.1.4" />		
 	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" spec="1.6.1"/>		
@@ -38,7 +38,7 @@
 	<gap:plugin name="cordova-plugin-media" source="npm" spec="2.4.1"/>	
 	<gap:plugin name="cordova.plugins.diagnostic" source="npm" spec="3.1.7" />	
 	
-	<gap:plugin name="cordova-plugin-googlemaps" spec="1.3.9">
+	<gap:plugin name="cordova-plugin-googlemaps" source="npm" spec="1.3.9">
 	   <param name="API_KEY_FOR_ANDROID" value="AIzaSyBfLoW7HxmgUiRl1LBr5ARNkx2NDPrFN44" />
 	   <param name="API_KEY_FOR_IOS" value="XXX" />
 	</gap:plugin>
