@@ -96,12 +96,12 @@
     
     <ons-list-item onclick="menu.setMainPage('browseRestaurant.html', {closeMenu: true})" class="bottom-menu-item">
       <ons-icon icon="ion-android-menu"></ons-icon> 
-      <span class="trn" data-trn-key="browse_resto">Browse Restaurant</span>
+      <span class="trn" data-trn-key="browse_resto">Procurar Agora</span>
     </ons-list-item>
     
     <ons-list-item onclick="showProfile();" class="bottom-menu-item">
       <ons-icon icon="ion-android-contact"></ons-icon> 
-      <span class="trn" data-trn-key="profile">Profile</span>
+      <span class="trn" data-trn-key="profile">Perfil</span>
     </ons-list-item>    
     
     <ons-list-item onclick="showOrders();" class="bottom-menu-item">
@@ -126,7 +126,7 @@
     
     <ons-list-item onclick="logout();" class="bottom-menu-item logout-menu">
       <ons-icon icon="ion-log-out"></ons-icon> 
-      <span class="trn" data-trn-key="logout">Logout</span>
+      <span class="trn" data-trn-key="logout">SAIR</span>
     </ons-list-item>    
             
   </ons-list>
@@ -159,12 +159,12 @@
        <div class="padtop25">
        <button class="button button--quiet green" onclick="getCurrentLocation();">
        <ons-icon icon="fa-location-arrow"></ons-icon>
-         <span class="trn" data-trn-key="use_my_location">Use my current location</span>
+         <span class="trn" data-trn-key="use_my_location">Use minha localização</span>
        </button>       
        </div>
        
         <button class="button green-btn button--large" onclick="searchMerchant();">
-	      <span class="trn" data-trn-key="search_restaurant">Search Restaurant</span>    	      
+	      <span class="trn" data-trn-key="search_restaurant">Procurar restaurantes</span>    	      
 	      <div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
 	   </button>
 	   
@@ -173,10 +173,10 @@
 
     <div class="wrapper no-connection">
       <ons-icon icon="ion-wifi" id="ion-wifi"></ons-icon>
-      <p class="trn" data-trn-key="connection_lost" >CONNECTION LOST</p>      
+      <p class="trn" data-trn-key="connection_lost" >SEM INTERNET!!!!</p>      
       <button class="button button--quiet green" onclick="refreshConnection();">
       <ons-icon icon="ion-android-refresh">
-         </ons-icon> <span class="trn" data-trn-key="tap_to_retry">Tap to retry</span>
+         </ons-icon> <span class="trn" data-trn-key="tap_to_retry">tente novamente aqui!</span>
       </button>
     </div>   
         
@@ -230,7 +230,7 @@
 	  <div class="wrapper">
 	      <div class="field-wrapper">
 	      <input type="text" name="restaurant_name"  class="restaurant_name text-input text-input--underbar has_validation" 
-	      placeholder="Enter Restaurant name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+	      placeholder="Enter Restaurant name" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
 	      </div>
 	  </div>	
 	  
@@ -346,7 +346,7 @@
     </form>
     
     <button class="button green-btn button--large trn" data-trn-key="add_to_cart" onclick="addToCart();">
-	Carrinho
+	DELIVER-BDC
 	<div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
 	</button>
       
@@ -479,32 +479,32 @@
    <div class="wrapper">
       <div class="field-wrapper">
       <input type="text" name="first_name"  class="first_name text-input text-input--underbar has_validation" 
-      placeholder="First Name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="First Name" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="text" name="last_name"  class="last_name text-input text-input--underbar has_validation" 
-      placeholder="Last Name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Last Name" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="text" name="contact_phone"  class="mobile_inputs contact_phone text-input text-input--underbar has_validation" 
-      placeholder="Mobile Phone" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Mobile Phone" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="email" name="email_address"  class="email_address text-input text-input--underbar has_validation" 
-      placeholder="Email address" value="" data-validation="email" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Email address" value="" data-validation="email" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="password" name="password"  class="password text-input text-input--underbar has_validation" 
-      placeholder="Password" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Password" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="password" name="cpassword"  class="cpassword text-input text-input--underbar has_validation" 
-      placeholder="Confirm Password" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Confirm Password" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="custom-fields-wrap" id="custom-fields-wrap">
@@ -596,7 +596,7 @@
    <div class="wrapper">
       <div class="field-wrapper">
       <input type="text" name="contact_phone"  class="mobile_inputs contact_phone text-input text-input--underbar has_validation" 
-      placeholder="Contact phone" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Contact phone" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>      
    </div>
    
@@ -899,17 +899,17 @@
    
    <div class="field-wrapper">
       <input type="text" name="date_booking"  class="date_booking text-input text-input--underbar has_validation" 
-      placeholder="Date Of Booking" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Date Of Booking" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
    </div>
    
    <div class="field-wrapper">
       <input type="text" name="booking_time"  class="booking_time text-input text-input--underbar has_validation" 
-      placeholder="Time Of Booking" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Time Of Booking" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
    </div>
    
    <div class="field-wrapper">
       <input type="text" name="booking_name"  class="booking_name text-input text-input--underbar has_validation" 
-      placeholder="Name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Name" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
    </div>
    
    <div class="field-wrapper">
@@ -919,7 +919,7 @@
    
    <div class="field-wrapper">
       <input type="text" name="mobile"  class="mobile_inputs mobile text-input text-input--underbar has_validation" 
-      placeholder="Mobile Number" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Mobile Number" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
    </div>
    
    <div class="field-wrapper">
@@ -1035,7 +1035,7 @@
       
       <div class="field-wrapper">
       <input type="text" name="review"  class="review text-input text-input--underbar has_validation" 
-      placeholder="Your reviews" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Your reviews" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
    
    
@@ -1095,7 +1095,7 @@
       <div class="wrapper">
 	      <div class="field-wrapper">
 	      <input type="text" name="restaurant_name"  class="restaurant_name text-input text-input--underbar has_validation" 
-	      placeholder="Enter Restaurant name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+	      placeholder="Enter Restaurant name" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
 	      </div>
 	  </div>
 	  
@@ -1135,22 +1135,22 @@
    <div class="wrapper">
       <div class="field-wrapper">
       <input type="text" name="first_name"  class="first_name text-input text-input--underbar has_validation" 
-      placeholder="First Name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="First Name" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
 
       <div class="field-wrapper">
       <input type="text" name="last_name"  class="last_name text-input text-input--underbar has_validation" 
-      placeholder="Last Name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Last Name" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>           
       
       <div class="field-wrapper">
       <input type="text" name="email_address"  class="email_address text-input text-input--underbar has_validation" 
-      placeholder="Email address" value="" disabled data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Email address" value="" disabled data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>       
       
       <div class="field-wrapper">
       <input type="text" name="contact_phone"  class="mobile_inputs contact_phone text-input text-input--underbar has_validation" 
-      placeholder="Contact phone" value="" data-validation="required" data-validation-error-msg="this field is mandatory!"  >
+      placeholder="Contact phone" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!"  >
       </div>       
       
       <div class="field-wrapper">
@@ -1254,12 +1254,12 @@
    <div class="wrapper">
       <div class="field-wrapper">
       <input type="text" name="email_address"  class="email_address text-input text-input--underbar has_validation" 
-      placeholder="Email address" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Email address" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
 
       <div class="field-wrapper">
       <input type="password" name="password"  class="password text-input text-input--underbar has_validation" 
-      placeholder="Password" value="" data-validation="required" data-validation-error-msg="this field is mandatory!"  >
+      placeholder="Password" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!"  >
       </div>                                     
    </div>
    
@@ -1303,7 +1303,7 @@
       
           <div class="field-wrapper">
           <input type="text" name="email_address"  class="email_address text-input text-input--underbar has_validation" 
-           placeholder="Email address" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+           placeholder="Email address" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
           </div>
       </div>      
       
@@ -1332,32 +1332,32 @@
    <div class="wrapper">
       <div class="field-wrapper">
       <input type="text" name="first_name"  class="first_name text-input text-input--underbar has_validation" 
-      placeholder="First Name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="First Name" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="text" name="last_name"  class="last_name text-input text-input--underbar has_validation" 
-      placeholder="Last Name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Last Name" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="text" name="contact_phone"  class="mobile_inputs contact_phone text-input text-input--underbar has_validation" 
-      placeholder="Mobile Phone" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Mobile Phone" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="email" name="email_address"  class="email_address text-input text-input--underbar has_validation" 
-      placeholder="Email address" value="" data-validation="email" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Email address" value="" data-validation="email" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="password" name="password"  class="password text-input text-input--underbar has_validation" 
-      placeholder="Password" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Password" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="password" name="cpassword"  class="cpassword text-input text-input--underbar has_validation" 
-      placeholder="Confirm Password" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Confirm Password" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       
@@ -1490,22 +1490,22 @@
    <div class="wrapper">
       <div class="field-wrapper">
       <input type="text" name="street"  class="street text-input text-input--underbar has_validation" 
-      placeholder="Street" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Street" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="text" name="city"  class="city text-input text-input--underbar has_validation" 
-      placeholder="City" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="City" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="text" name="state"  class="state text-input text-input--underbar has_validation" 
-      placeholder="State" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="State" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="text" name="zipcode"  class="zipcode text-input text-input--underbar has_validation" 
-      placeholder="Zipcode" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Zipcode" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
@@ -1524,7 +1524,7 @@
    </div>
       
    <button class="trn button green-btn button--large" onclick="saveAddressBook();" data-trn-key="save">
-	Save
+	Salvar
 	<div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
    </button>
    </form>   
@@ -1546,8 +1546,8 @@
 	  
 	   <p>          
           <ons-button class="trn button green-btn button--large" onclick="showOrders2();" data-trn-key="view">
-          View</ons-button>
-          <button onclick="pushDialog.hide();" class="button button--quiet trn" data-trn-key="cancel">Cancel</button>
+          VER AGORA</ons-button>
+          <button onclick="pushDialog.hide();" class="button button--quiet trn" data-trn-key="cancel">Cancelar</button>
         </p>
 	  
 	  </div>  
@@ -1677,7 +1677,7 @@
 	  <div class="wrapper center pad-top20">	 
 	   <div class="field-wrapper">
           <input type="text" id="new_s" name="new_s"  class="new_s text-input text-input--underbar has_validation" 
-           placeholder="Enter your address" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+           placeholder="Enter your address" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
        </div>	  	  	  
 	  </div>  
 	  
@@ -1734,7 +1734,7 @@
    
      <div class="field-wrapper">
       <input type="text" name="cc_number"  class="cc_number limit_char numeric_only text-input text-input--underbar has_validation" 
-      placeholder="Credit Card Number" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" maxlength="16" data-maxl="16" >
+      placeholder="Credit Card Number" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" maxlength="16" data-maxl="16" >
       </div>
       
      <ons-list modifier="inset" class="settings-list">
@@ -1751,37 +1751,37 @@
      
      <div class="field-wrapper">
       <input type="text" name="cvv"  class="cvv limit_char numeric_only text-input text-input--underbar has_validation" 
-      placeholder="CVV" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" maxlength="4" data-maxl="16" >
+      placeholder="CVV" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" maxlength="4" data-maxl="16" >
       </div>
       
      <div class="field-wrapper">
       <input type="text" name="x_first_name"  class="x_first_name text-input text-input--underbar has_validation" 
-      placeholder="First Name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!"  >
+      placeholder="First Name" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!"  >
       </div>
       
      <div class="field-wrapper">
       <input type="text" name="x_last_name"  class="x_last_name text-input text-input--underbar has_validation" 
-      placeholder="Last Name" value="" data-validation="required" data-validation-error-msg="this field is mandatory!"  >
+      placeholder="Last Name" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!"  >
      </div> 
      
      <div class="field-wrapper">
       <input type="text" name="x_address"  class="x_address text-input text-input--underbar has_validation" 
-      placeholder="Address" value="" data-validation="required" data-validation-error-msg="this field is mandatory!"  >
+      placeholder="Address" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!"  >
      </div>  
      
      <div class="field-wrapper">
       <input type="text" name="x_city"  class="x_city text-input text-input--underbar has_validation" 
-      placeholder="City" value="" data-validation="required" data-validation-error-msg="this field is mandatory!"  >
+      placeholder="City" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!"  >
      </div>   
 
     <div class="field-wrapper">
       <input type="text" name="x_state"  class="x_state text-input text-input--underbar has_validation" 
-      placeholder="State" value="" data-validation="required" data-validation-error-msg="this field is mandatory!"  >
+      placeholder="State" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!"  >
     </div>  
     
    <div class="field-wrapper">
       <input type="text" name="x_zip"  class="x_zip text-input text-input--underbar has_validation" 
-      placeholder="Zip Code" value="" data-validation="required" data-validation-error-msg="this field is mandatory!"  >
+      placeholder="Zip Code" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!"  >
     </div>   
     
     
@@ -1887,7 +1887,7 @@
    
      <div class="field-wrapper">
       <input type="text" name="cc_number"  class="cc_number limit_char numeric_only text-input text-input--underbar has_validation" 
-      placeholder="Credit Card Number" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" maxlength="16"  data-maxl="16" >
+      placeholder="Credit Card Number" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" maxlength="16"  data-maxl="16" >
       </div>
       
      <ons-list modifier="inset" class="settings-list">
@@ -1904,7 +1904,7 @@
      
      <div class="field-wrapper">
       <input type="text" name="cvv"  class="cvv limit_char numeric_only text-input text-input--underbar has_validation" 
-      placeholder="CVV" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" maxlength="4" data-maxl="4" >
+      placeholder="CVV" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" maxlength="4" data-maxl="4" >
       </div>
 
    <button class="trn button green-btn button--large" onclick="stripePayNow();" data-trn-key="pay_now">
@@ -1947,7 +1947,7 @@
    
    <div class="field-wrapper">
       <input type="text" name="code"  class="code text-input text-input--underbar has_validation" 
-       value="" data-validation="required" data-validation-error-msg="this field is mandatory!" maxlength="11" >
+       value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" maxlength="11" >
    </div>
    
    <button class="trn button green-btn button--large" onclick="validateCLient();" data-trn-key="submit">
@@ -2102,12 +2102,12 @@
 
       <div class="field-wrapper">
       <input type="email" name="email_address"  class="email_address text-input text-input--underbar has_validation" 
-      placeholder="Email address" value="" data-validation="email" data-validation-error-msg="this field is mandatory!" >
+      placeholder="Email address" value="" data-validation="email" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
       
       <div class="field-wrapper">
       <input type="text" name="code"  class="code text-input text-input--underbar has_validation" 
-       placeholder="Code" data-validation="required" data-validation-error-msg="this field is mandatory!" maxlength="11" >
+       placeholder="Code" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" maxlength="11" >
       </div>
       
       <button class="trn button green-btn button--large" onclick="verifyAccount();" data-trn-key="submit">
@@ -2149,25 +2149,25 @@
         <div class="wrapper">
 	      <div class="field-wrapper">
 	      <input type="text" name="stree_1"  class="stree_1 text-input text-input--underbar has_validation" 
-	      placeholder="Street" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+	      placeholder="Bairro, rua, nº" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
 	      </div>      
 	   </div>      
 	   <div class="wrapper">
 	      <div class="field-wrapper">
 	      <input type="text" name="city_1"  class="city_1 text-input text-input--underbar has_validation" 
-	      placeholder="City" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+	      placeholder="Cidade" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
 	      </div>      
 	   </div>
 	   <div class="wrapper">
 	      <div class="field-wrapper">
 	      <input type="text" name="state_1"  class="state_1 text-input text-input--underbar has_validation" 
-	      placeholder="State" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
+	      placeholder="Estado" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
 	      </div>      
 	   </div>
 	   <div class="wrapper">
 	      <div class="field-wrapper">
 	      <input type="text" name="zipcode_1"  class="zipcode_1 text-input text-input--underbar" 
-	      placeholder="Postal code/Zip Code" value=""  >
+	      placeholder="CEP" value=""  >
 	      </div>      
 	   </div>
 	   
@@ -2373,7 +2373,7 @@
     <div class="field-wrapper">    
     
       <input type="text" name="contact_phone"  class="mobile_inputs contact_phone text-input text-input--underbar has_validation" 
-      placeholder="Mobile Phone" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >  
+      placeholder="Mobile Phone" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >  
     
     </div>   
     
