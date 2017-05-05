@@ -3,14 +3,14 @@
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schemas.android.com/apk/res/android"
     id        = "com.hostbdc.delivery.bdc"
-    versionCode = "1"
-    version   = "1.0">
-    <name>Deliver BDC</name>
+    versionCode = "2"
+    version   = "1.1">
+    <name>DELIVERY BDC</name>
     <description>
-        Deliver-BDC de Barra do Corda-MA
+        Delivery-BDC de Barra do Corda-MA
     </description>
     <author email="central@hostbdc.com.br" href="http://cordova.io">
-        deliver.shopbdc.com.br
+        delivery.shopbdc.com.br
     </author>
     <icon src="icon.png" />           
     <content src="index.html" />
