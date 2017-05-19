@@ -119,11 +119,6 @@
       <span class="trn" data-trn-key="my_points">My Points</span>
     </ons-list-item>    
     
-     <ons-list-item onclick="menu.setMainPage('cancelamento.html', {closeMenu: true})" class="bottom-menu-item">
-      <ons-icon icon="ion-connection-bars"></ons-icon> 
-      <span class="trn" data-trn-key="cancelamentos"cancelamentos</span>
-    </ons-list-item>     
-    
     <ons-list-item onclick="menu.setMainPage('settings.html', {closeMenu: true})" class="bottom-menu-item">
       <ons-icon icon="ion-gear-a"></ons-icon> 
       <span class="trn" data-trn-key="settings">Settings</span>
@@ -137,33 +132,6 @@
   </ons-list>
   </ons-page> 
 </script>
-<script type="text/ons-template" id="cancelamento.html">   
-<ons-navigator title="Navigator" var="sNavigator"> 
-<ons-page id="page-browse" on-device-backbutton="backtoHome()" >
-   <ons-toolbar>     
-   
-    <div class="left">
-     <ons-toolbar-button onclick="setHome();">
-        <ons-icon icon="fa-chevron-left"></ons-icon>
-     </ons-toolbar-button>        
-    </div> 
-         
-    <div class="center white"><span id="search-text" class="trn" data-trn-key="browse_resto">Para Cancelamentos</span></div>           
-        
-   </ons-toolbar>
-   
-   </ons-scroller>
-   	<body>
-		<p style="text-align: center;">
-			Curte a nossa p&aacute;gina do Facebook!</p>
-		<p style="text-align: center;">
-			e envie uma mensagem para cancelamentos!!!</p>
-</body>
-<div class="fb-page" data-href="https://www.facebook.com/deliverybdc" data-tabs="messages" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/deliverybdc" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/deliverybdc">Delivery-BDC</a></blockquote></div>
-</script>
-</ons-page>
-</ons-navigator> 
-</script>
 
 <script type="text/ons-template" id="home.html">
 <ons-navigator title="Navigator" var="kNavigator">
@@ -173,9 +141,7 @@
       <div class="left">
         <ons-toolbar-button ng-click="menu.toggleMenu()"><ons-icon icon="fa-bars"></ons-icon></ons-toolbar-button>        
       </div>    
-
     </ons-toolbar>
-
     <div class="home-header">
          <img src="css/images/banner.png" alt="" title="">
     </div> 
@@ -202,7 +168,6 @@
 	   
 	   	  
     </div>      
-
     <div class="wrapper no-connection">
       <ons-icon icon="ion-wifi" id="ion-wifi"></ons-icon>
       <p class="trn" data-trn-key="connection_lost" >SEM INTERNET!!!!</p>      
@@ -248,7 +213,6 @@
 
 <script type="text/ons-template" id="filterOptons.html">    
   <ons-dialog var="navDialog" style="width:90%;height:350px;" cancelable  >
-
   <ons-page id="page-filter-options" >  
 	  <ons-toolbar> 
 	      <div class="center white trn" data-trn-key="filter_results">Filter Results</div>   
@@ -363,7 +327,6 @@
      <div class="left"><ons-back-button></ons-back-button></div>     
      <div class="center white"><span id="search-text"></span></div>                         
    </ons-toolbar>
-
    <div class="item-header"></div> 
    
    <div class="wrapper">
@@ -468,7 +431,6 @@
    
    </div>
    
-
 </ons-page>
 </script>   
 
@@ -572,7 +534,6 @@
    </div>
    
    </form>
-
 </ons-page>
 </script>     
 
@@ -663,13 +624,11 @@
 	<div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
    </button>
    </form>
-
 </ons-page>
 </script>     
 
 <script type="text/ons-template" id="dialogAddressBook.html">    
   <ons-dialog var="dialogAddressBook" style="width:90%;height:250px;" cancelable  >
-
   <ons-page id="page-dialog-addressbook" >  
 	  <ons-toolbar> 
 	      <div class="center white trn" data-trn-key="address_book">Address Book</div>   	      	      	      
@@ -801,7 +760,6 @@
 	<div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
    </button>
    </form>
-
 </ons-page>
 </script>   
 
@@ -844,7 +802,6 @@
         <ons-icon icon="fa-long-arrow-right"></ons-icon>
        </button>       
    </div> 
-
 </ons-page>
 </script>   
 
@@ -959,7 +916,6 @@
       placeholder="Your Instructions" value="" >
    </div>
   </div> 
-
    
    <button class="button green-btn button--large trn" onclick="submitBooking();" data-trn-key="book_now">
 	Book Now!
@@ -967,7 +923,6 @@
    </button>
      
    </form>
-
 </ons-page>
 </script>   
 
@@ -1001,7 +956,6 @@
        back to home <ons-icon icon="fa-long-arrow-right"></ons-icon>
        </button>       
    </div> 
-
 </ons-page>
 </script>   
 
@@ -1014,7 +968,6 @@
          <ons-toolbar-button onclick="showReviewForm();" ><ons-icon icon="ion-plus-round"></ons-toolbar-button>
      </div>
    </ons-toolbar>      
-
     <div class="orange-header">
       <ons-row >
         <ons-col width="40%">
@@ -1040,7 +993,6 @@
      <div class="left"><ons-back-button></ons-back-button></div> 
      <div class="center white"><span id="search-text" class="trn" data-trn-key="add_review">Add Reviews</span></div>                 
    </ons-toolbar>      
-
     <div class="orange-header">
       <ons-row >
         <ons-col width="40%">
@@ -1052,7 +1004,6 @@
         </ons-col>
       </ons-row>
    </div> 
-
    <form id="frm-addreview" class="frm-addreview" method="post">   
    <div class="wrapper">
    
@@ -1116,7 +1067,6 @@
 
 <script type="text/ons-template" id="filterBrowseResto.html">    
   <ons-dialog var="dialogBrowseResto" style="width:90%;height:170px;" cancelable  >
-
   <ons-page id="page-filterbrowse" >  
 	  <ons-toolbar> 
 	      <div class="center white trn" data-trn-key="filter_resto">Filter Restaurant</div>   	      	      	      
@@ -1169,7 +1119,6 @@
       <input type="text" name="first_name"  class="first_name text-input text-input--underbar has_validation" 
       placeholder="First Name" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
-
       <div class="field-wrapper">
       <input type="text" name="last_name"  class="last_name text-input text-input--underbar has_validation" 
       placeholder="Last Name" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
@@ -1224,7 +1173,6 @@
       <img src="css/images/banner.png" alt="" title="">
       <p class="center trn" data-trn-key="please_log_or_reg">Please log in or register to continue with<br>your order</p>
     </div> 
-
    <div class="wrapper center wrapper-white fb-login-wrap">   
       <button class="button blue-btn button--large fb-loginbutton" id="fb-loginbutton" onclick="myFacebookLogin();">
         <ons-icon icon="fa-facebook"></ons-icon> <span class="trn" data-trn-key="sigin_fb">Sign in with Facebook</span>
@@ -1260,12 +1208,10 @@
 
 <script type="text/ons-template" id="login.html">   
 <ons-page id="page-login">
-
    <ons-toolbar>        
     <div class="left"><ons-back-button></ons-back-button></div>             
     <div class="center white"><span id="search-text" class="trn" data-trn-key="login">Log in</span></div>                  
    </ons-toolbar>
-
    <div class="wrapper center wrapper-white page-login-fb">   
       <button class="button blue-btn button--large fb-loginbutton" id="fb-loginbutton" onclick="myFacebookLogin();">
         <ons-icon icon="fa-facebook"></ons-icon> 
@@ -1288,7 +1234,6 @@
       <input type="text" name="email_address"  class="email_address text-input text-input--underbar has_validation" 
       placeholder="Email address" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >
       </div>
-
       <div class="field-wrapper">
       <input type="password" name="password"  class="password text-input text-input--underbar has_validation" 
       placeholder="Password" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!"  >
@@ -1319,7 +1264,6 @@
 
 <script type="text/ons-template" id="forgotPassword.html">    
   <ons-dialog var="dialogForgotPass" style="width:90%;height:250px;" cancelable  >
-
   <ons-page id="page-forgotpass" >  
 	  <ons-toolbar> 
 	      <div class="center white trn" data-trn-key="forgot_pass">Forgot Password</div>  	      	      
@@ -1352,7 +1296,6 @@
 
 <script type="text/ons-template" id="signup.html">   
 <ons-page id="page-signup">
-
    <ons-toolbar>        
     <div class="left"><ons-back-button></ons-back-button></div>             
     <div class="center white"><span id="search-text" class="trn" data-trn-key="register">Register</span></div>                  
@@ -1452,7 +1395,6 @@
 
 <script type="text/ons-template" id="ordersDetails.html">   
 <ons-page id="page-orderdetails">
-
    <ons-toolbar>        
     <div class="left"><ons-back-button></ons-back-button></div>             
     <div class="center white"><span id="search-text"></span></div>                  
@@ -1469,7 +1411,6 @@
    </ons-list>
          
    </div>
-
 </ons-page>
 </script>  
 
@@ -1566,12 +1507,10 @@
 
 <script type="text/ons-template" id="pushNotification.html">    
   <ons-dialog var="pushDialog" style="width:90%;height:200px;"  >
-
   <ons-page id="page-notification" >  
 	  <ons-toolbar> 
 	      <div class="center white push-title"></div>   	      	      
 	  </ons-toolbar>
-
 	  <div class="wrapper center pad-top20">
 	  <p class="small-font-dim push-message"></p>
 	  
@@ -1589,12 +1528,10 @@
 
 <script type="text/ons-template" id="pushNotificationCampaign.html">    
   <ons-dialog var="pushcampaignDialog" style="width:90%;height:200px;"  >
-
   <ons-page id="page-notificationcampaign" >  
 	  <ons-toolbar> 
 	      <div class="center white push-title"></div>   	      	      
 	  </ons-toolbar>
-
 	  <div class="wrapper center pad-top20">
 	  <p class="small-font-dim push-message"></p>
 	  
@@ -1677,7 +1614,6 @@
 
 <script type="text/ons-template" id="locationOptions.html">    
   <ons-dialog var="locationDialog" style="width:90%;height:350px;" cancelable  >
-
   <ons-page id="page-locations" >  
 	  <ons-toolbar> 
 	      <div class="center white trn" data-trn-key="select_country">Select Country</div>   	      	      	      
@@ -1698,12 +1634,10 @@
 
 <script type="text/ons-template" id="addressPopup.html">    
   <ons-dialog var="addressDialog" style="width:90%;height:200px;" cancelable  >
-
   <ons-page id="page-adddresspopup" >  
 	  <ons-toolbar> 
 	      <div class="center white trn" data-trn-key="enter_your_location">Enter your location</div>   	      	      
 	  </ons-toolbar>
-
 	  <form id="frm-adddresspopup" class="frm-adddresspopup" method="post">   
 	  <div class="wrapper center pad-top20">	 
 	   <div class="field-wrapper">
@@ -1725,7 +1659,6 @@
 
 <script type="text/ons-template" id="languageOptions.html">    
   <ons-dialog var="languageOptions" style="width:90%;height:350px;" cancelable  >
-
   <ons-page id="page-languageoptions" >  
 	  <ons-toolbar> 
 	      <div class="center white trn" data-trn-key="select_your_language">Select your language</div>   	      	      	      	      
@@ -1804,7 +1737,6 @@
       <input type="text" name="x_city"  class="x_city text-input text-input--underbar has_validation" 
       placeholder="City" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!"  >
      </div>   
-
     <div class="field-wrapper">
       <input type="text" name="x_state"  class="x_state text-input text-input--underbar has_validation" 
       placeholder="State" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!"  >
@@ -1830,13 +1762,11 @@
    </button>
    
    </form> 
-
 </ons-page>
 </script>
 
 <script type="text/ons-template" id="ExpirationMonth.html">    
   <ons-dialog var="ExpirationMonthDialog" style="width:90%;height:350px;" cancelable  >
-
   <ons-page id="page-expirationmonth" >  
 	  <ons-toolbar> 
 	       	      	      	      
@@ -1856,7 +1786,6 @@
 
 <script type="text/ons-template" id="showExpirationYearDialog.html">    
   <ons-dialog var="showExpirationYearDialog" style="width:90%;height:350px;" cancelable  >
-
   <ons-page id="page-expiration-year" >  
 	  <ons-toolbar> 
 	       	      	      	      
@@ -1876,7 +1805,6 @@
 
 <script type="text/ons-template" id="showCountryDialog.html">    
   <ons-dialog var="showCountryDialog" style="width:90%;height:350px;" cancelable  >
-
   <ons-page id="page-show-country" >  
 	  <ons-toolbar> 
 	       	      	      	      
@@ -1937,14 +1865,12 @@
       <input type="text" name="cvv"  class="cvv limit_char numeric_only text-input text-input--underbar has_validation" 
       placeholder="CVV" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" maxlength="4" data-maxl="4" >
       </div>
-
    <button class="trn button green-btn button--large" onclick="stripePayNow();" data-trn-key="pay_now">
 	Pay Now
 	<div class="search-btn"><ons-icon icon="ion-checkmark-round"></ons-icon></div>
    </button>
    
    </form> 
-
 </ons-page>
 </script>
 
@@ -2121,7 +2047,6 @@
 
 <script type="text/ons-template" id="verify-account.html">   
 <ons-page id="page-verify-account">
-
    <ons-toolbar>        
     <div class="left"><ons-back-button></ons-back-button></div>             
     <div class="center white">
@@ -2130,7 +2055,6 @@
    
    <form id="frm-verify-account" class="frm-verify-account" method="post">   
     <div class="wrapper top20">
-
       <div class="field-wrapper">
       <input type="email" name="email_address"  class="email_address text-input text-input--underbar has_validation" 
       placeholder="Email address" value="" data-validation="email" data-validation-error-msg="Opps! Este campo é obrigatório!" >
@@ -2147,20 +2071,17 @@
     
     </div>
    </form>  
-
 </ons-page>
 </script>
 
 
 <script type="text/ons-template" id="address-selection.html">   
 <ons-page id="page-address-selection">
-
    <ons-toolbar>        
     <div class="left"><ons-back-button></ons-back-button></div>             
     <div class="center white">
     <span  class="trn" data-trn-key="address">Address</span></div>                  
    </ons-toolbar>
-
    <ons-list>       
        <ons-list-item modifier="chevron" onclick="popUpAddressBook();" > 
        <span class="trn" data-trn-key="select_from_address">Select from your address book</span>       
@@ -2227,7 +2148,6 @@
    </ons-toolbar>
    
    <div id="map_canvas_address">   
-
        <div class="list-wrapper" id="direction-wrap">
          <ons-list>
            <ons-list-item  modifier="task-list"  >
@@ -2250,13 +2170,11 @@
 
 <script type="text/ons-template" id="change-address.html">   
 <ons-page id="page-change-address">
-
    <ons-toolbar>        
     <div class="left"><ons-back-button></ons-back-button></div>             
     <div class="center white">
     <span  class="trn" data-trn-key="change_address">Change Address</span></div>                  
    </ons-toolbar>
-
      <ons-list>              
        
        <ons-list-item modifier="chevron" onclick="showMapAddress('changeaddress');" > 
@@ -2268,14 +2186,12 @@
        </ons-list-item>    
               
    </ons-list>
-
 </ons-page>
 </script>
 
 
 <script type="text/ons-template" id="order-options.html">   
 <ons-page id="page-order-options">
-
   <ons-toolbar>        
     <div class="left"><ons-back-button></ons-back-button></div>             
     <div class="center white">
@@ -2290,23 +2206,16 @@
        <span class="trn" data-trn-key="show_order_details">Show Order Details</span>
        </ons-list-item>                  
        
-       <ons-list-item onclick="menu.setMainPage('cancelamento.html', {closeMenu: true})" class="bottom-menu-item">
-       <ons-icon icon="ion-connection-bars"></ons-icon> 
-       <span class="trn" data-trn-key="cancelamentos">Cancelar Pedidos</span>
-       </ons-list-item>     
-       
        <ons-list-item modifier="chevron" onclick="showTrackPage();" > 
        <span class="trn" data-trn-key="track_your_order">Track your Order</span>
        </ons-list-item>                  
               
    </ons-list>
-
 </ons-page>
 </script>
 
 <script type="text/ons-template" id="track-order.html">   
 <ons-page id="page-track-order" modifier="page-track">
-
    <ons-toolbar>        
     <div class="left"><ons-back-button></ons-back-button></div>             
     <div class="center white">
@@ -2344,7 +2253,6 @@
    <button class="button green-btn button--large trn track_driver" onclick="showTrackingPage();" data-trn-key="track_driver">
 	Track Driver	
    </button>
-
 </ons-page>
 </script>
 
@@ -2417,7 +2325,6 @@
    </form>
    
    </div>
-
 </ons-page>
 </script>
 
