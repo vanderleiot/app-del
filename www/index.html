@@ -1475,8 +1475,7 @@
    
    <ons-list class="list-dim-text" id="item-history">                   
    </ons-list>
-       
-   <div id="re-order-wrap">   
+         
    </div>
 
 </ons-page>
@@ -2299,9 +2298,10 @@
        <span class="trn" data-trn-key="show_order_details">Show Order Details</span>
        </ons-list-item>                  
        
-       <ons-list-item modifier="chevron" onclick="reOrder2();" > 
-       <span class="trn" data-trn-key="click_here_to_reorder">Click here to Re-order</span>
-       </ons-list-item>                  
+       <ons-list-item onclick="menu.setMainPage('cancelamento.html', {closeMenu: true})" class="bottom-menu-item">
+       <ons-icon icon="ion-connection-bars"></ons-icon> 
+       <span class="trn" data-trn-key="settings">Cancelar Pedidos</span>
+       </ons-list-item>     
        
        <ons-list-item modifier="chevron" onclick="showTrackPage();" > 
        <span class="trn" data-trn-key="track_your_order">Track your Order</span>
