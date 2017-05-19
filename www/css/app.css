@@ -18,7 +18,7 @@ padding:8px;
 .orange-header
 {
 max-width:100%;
-background:#00FB92;
+background:#00C579;
 color:#fff;
 padding-top:10px;
 padding-bottom:15px;
@@ -36,7 +36,7 @@ margin:auto;
 max-width:70%;
 }
 .navigation-bar{
-background:#0008FB;
+background:#0000FF;
 color:#fff;
 border:none;
 }
@@ -79,7 +79,7 @@ padding-bottom:25px;
 }
 
 .tab-bar{
-background:#0008FB;
+background:#00B279;
 }
 .clear{
 clear:both;
@@ -101,8 +101,8 @@ position:relative;
 .page--menu-page__background {
 /*background-color: #333;
 color: white;*/
-/*background-color:#FA00A3; color:#FA00A3;*/
-background-color:#00FB92;
+/*background-color:#363535; color:#868686;*/
+background-color:#F2F2F3;
 color:#333;
 }
 
@@ -110,8 +110,8 @@ color:#333;
 .bottom-menu-item:first-child,
 .bottom-menu-item
 {
-/*border-color: #FA00A3;*/
-/*border-color:#FA00A3;
+/*border-color: #393939;*/
+/*border-color:#4C4C4C;
 color: #acacab;*/
 
 /*border-color:#DFDFE0;*/
@@ -124,7 +124,7 @@ font-size:15px;
 }
 
 .main-menu-list .list__item{
-border-bottom:1px solid #0008FB;
+border-bottom:1px solid #DFDFE0;
 }
 
 .bottom-menu-item span{
@@ -218,7 +218,7 @@ address,
 #page-booking-ty .wrapper p,
 .settings-list
 {
-line-height:2;
+line-height:1;
 font-size:14px;
 color:#666;
 margin:8px 0;
@@ -278,7 +278,7 @@ padding-left:8px;
 }
 
 .restaurant-list .list-item-container:nth-child(even){
-/*background:#FF09BE;*/
+/*background:#F7F7F7;*/
 }
 .notification.open,
 .notification.pre-order
@@ -288,7 +288,7 @@ background:#00B279;
 
 #category-list .row{
 color:#262626;
-font-size:24px;
+font-size:18px;
 }
 
 .list-header
@@ -311,14 +311,14 @@ font-size:13px;
 }
 .item-header{
 height:170px;
-background:#F8DF95;
+background:#fff;
 background-repeat: no-repeat !important;
 background-size: contain !important;
 background-position:center !important;
 }
 
 #page-itemdisplay .title{
-border-bottom:2px solid #F7D358;
+border-bottom:1px solid #DDDDDD;
 padding-bottom: 8px;
 padding-top: 8px;
 }
@@ -333,13 +333,13 @@ font-size:14px;
 }
 
 .grey-border-top{
-border-top:1px solid #FFCF0A;
+border-top:1px solid #DDDDDD;
 }
 .grey-border-top2{
-border-top:2px solid #FFCF0A;
+border-top:2px solid #DDDDDD;
 }
 .grey-border-bottom{
-border-bottom:1px solid #FFCF0A;
+border-bottom:1px solid #DDDDDD;
 }
 
 #page-itemdisplay .grey-border-bottom{
@@ -452,7 +452,7 @@ min-height: 10px;
 }
 
 .delete-item{
-background:#F7D358;
+background:#DEDEDE;
 color: #FFFFFF;
 font-size: 15px;
 font-weight: normal;
@@ -559,7 +559,7 @@ height: 100%;
 position: absolute;
 top: 0;
 width: 100%;
-background:#20D001;
+background:#101317;
 }
 
 .loading-screen .inner{
@@ -643,7 +643,7 @@ color:#f75d34;
 
 .profile-pic-wrap{
 min-height:50px;
-background:#20D001;
+background:#33393c;
 color:#fff;
 padding:20px;
 }
@@ -722,7 +722,7 @@ display:none;
 }
 
 .img_loaded {
-  margin: 20px auto;
+  margin: 10px auto;
   font-size: 6px;
   position: relative;
   text-indent: -9999em;
@@ -739,8 +739,8 @@ display:none;
 .img_loaded,
 .img_loaded:after {
   border-radius: 50%;
-  width: 5em;
-  height: 5em;
+  width: 3em;
+  height: 3em;
 }
 @-webkit-keyframes load8 {
   0% {
