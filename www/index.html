@@ -119,6 +119,11 @@
       <span class="trn" data-trn-key="my_points">My Points</span>
     </ons-list-item>    
     
+     <ons-list-item onclick="menu.setMainPage('cancelamento.html', {closeMenu: true})" class="bottom-menu-item">
+      <ons-icon icon="ion-connection-bars"></ons-icon> 
+      <span class="trn" data-trn-key="settings">cancelamentos</span>
+    </ons-list-item>     
+    
     <ons-list-item onclick="menu.setMainPage('settings.html', {closeMenu: true})" class="bottom-menu-item">
       <ons-icon icon="ion-gear-a"></ons-icon> 
       <span class="trn" data-trn-key="settings">Settings</span>
@@ -131,6 +136,41 @@
             
   </ons-list>
   </ons-page> 
+</script>
+<script type="text/ons-template" id="cancelamento.html">   
+<ons-navigator title="Navigator" var="sNavigator"> 
+<ons-page id="page-browse" on-device-backbutton="backtoHome()" >
+   <ons-toolbar>     
+   
+    <div class="left">
+     <ons-toolbar-button onclick="setHome();">
+        <ons-icon icon="fa-chevron-left"></ons-icon>
+     </ons-toolbar-button>        
+    </div> 
+         
+    <div class="center white"><span id="search-text" class="trn" data-trn-key="browse_resto">Para Cancelamentos</span></div>           
+        
+   </ons-toolbar>
+   
+   <div class="results-header arrow_box"><span class="result-msg trn" data-trn-key="processing">Fale com a central</span></div>
+   
+   </ons-scroller>
+   	<body>
+		<p style="text-align: center;">
+			Curte a nossa p&aacute;gina do Facebook!</p>
+		<p style="text-align: center;">
+			e envie uma mensagem para cancelamentos!!!</p>
+	</body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.9&appId=1216449695098391";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</ons-page>
+</ons-navigator> 
 </script>
 
 <script type="text/ons-template" id="home.html">
