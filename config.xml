@@ -3,8 +3,8 @@
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schemas.android.com/apk/res/android"
     id        = "com.hostbdc.delivery.bdc"
-    versionCode = "2"
-    version   = "1.1">
+    versionCode = "3"
+    version   = "1.2">
     <name>DELIVERY BDC</name>
     <description>
         Delivery-BDC de Barra do Corda-MA
