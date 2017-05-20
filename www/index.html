@@ -122,7 +122,12 @@
     <ons-list-item onclick="menu.setMainPage('settings.html', {closeMenu: true})" class="bottom-menu-item">
       <ons-icon icon="ion-gear-a"></ons-icon> 
       <span class="trn" data-trn-key="settings">Settings</span>
-    </ons-list-item>    
+    </ons-list-item>
+
+    <ons-list-item onclick="menu.setMainPage('cancelamentos.html', {closeMenu: true})" class="bottom-menu-item">
+      <ons-icon icon="ion-android-contact"></ons-icon> 
+      <span class="trn" data-trn-key="cancelar_pedido">Cancelamentos</span>
+    </ons-list-item>       
     
     <ons-list-item onclick="logout();" class="bottom-menu-item logout-menu">
       <ons-icon icon="ion-log-out"></ons-icon> 
@@ -131,6 +136,38 @@
             
   </ons-list>
   </ons-page> 
+</script>
+<script type="text/ons-template" id="cancelamentos.html">   
+<ons-page id="page-enter-contact" >
+  
+  <ons-toolbar>        
+     <div class="left"><ons-back-button></ons-back-button></div>                      
+     <div class="center white">
+     <span class="trn" data-trn-key="enter_your_contact" >
+      Enter Your Contact Number
+     </span>
+     </div>
+   </ons-toolbar>
+   
+   <div class="wrapper" style="margin-top:10px;">
+   
+   <form id="frm-enter-contact" class="frm-enter-contact" method="post">   
+    <div class="field-wrapper">    
+    
+      <input type="text" name="contact_phone"  class="mobile_inputs contact_phone text-input text-input--underbar has_validation" 
+      placeholder="Mobile Phone" value="" data-validation="required" data-validation-error-msg="Opps! Este campo é obrigatório!" >  
+    
+    </div>   
+    
+    <button class="button green-btn button--large trn" onclick="submitContactForm();" data-trn-key="submit" style="margin-top:10px;" >
+	ENVIAR
+	<div class="search-btn"><ons-icon icon="fa-chevron-right"></ons-icon></div>
+   </button>
+    
+   </form>
+   
+   </div>
+</ons-page>
 </script>
 
 <script type="text/ons-template" id="home.html">
@@ -2208,7 +2245,11 @@
        
        <ons-list-item modifier="chevron" onclick="showTrackPage();" > 
        <span class="trn" data-trn-key="track_your_order">Track your Order</span>
-       </ons-list-item>                  
+       </ons-list-item>   
+  
+       <ons-list-item onclick="menu.setMainPage('cancelamentos.html', {closeMenu: true})" class="bottom-menu-item">
+       <span class="trn" data-trn-key="cancelar_pedido">Cancelamentos</span>
+       </ons-list-item>              
               
    </ons-list>
 </ons-page>
