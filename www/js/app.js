@@ -5781,7 +5781,3 @@ function reInitTrackMap(data)
 	track_order_map_interval = setInterval(function(){runTrackMap()}, 9000);  
     
 }
-page__background.page--mybg__background{
-background:url("images/b6.jpg") no-repeat center center;
-background-size:cover;
-}
