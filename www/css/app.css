@@ -1020,3 +1020,7 @@ background:#fc8344;
 .notification.started{
 background:#ba68c8;
 }
+.page__background.page--mybg__background{
+background:url("images/b6.jpg") no-repeat center center;
+background-size:cover;
+}
