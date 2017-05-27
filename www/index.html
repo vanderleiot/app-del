@@ -166,135 +166,97 @@
 </script>
 	
 <script type="text/ons-template" id="planos.html">   
-<ons-navigator title="Navigator" var="sNavigator"> 
-<ons-page id="page-settings" on-device-backbutton="backtoHome()" >
-   <ons-toolbar>     
-   
-    <div class="left">
+<ons-page id="planos-page">
+  <ons-progress-bar indeterminate></ons-progress-bar>
+  <ons-toolbar>
+    <div class="center"></div>
+   <div class="left">
      <ons-toolbar-button onclick="setHome();">
         <ons-icon icon="fa-chevron-left"></ons-icon>
      </ons-toolbar-button>        
     </div> 
-     <span class="trn" data-trn-key="enter_your_contact" >
-      Planos Empresa
-     </span>
-     </div>
-   </ons-toolbar>
-		<body>
-		<h3 style="color: blue; text-align: center;">
-			<span style="font-size:24px;">Para novos estabelecimentos cadastrados!</span></h3>
-		<hr />
-		<table align="center" border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
-			<tbody>
-				<tr>
-					<td style="text-align: center;">
-						PLANO TESTE</td>
-				</tr>
-			</tbody>
-		</table>
-		<table align="center" border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
-			<tbody>
-				<tr>
-					<td style="text-align: center;">
-						<strong>PLANO</strong></td>
-					<td style="text-align: center;">
-						<strong>QT/ITEM</strong></td>
-					<td style="text-align: center;">
-						<strong>QT/VENDAS</strong></td>
-				</tr>
-				<tr>
-					<td style="text-align: center;">
-						Teste</td>
-					<td style="text-align: center;">
-						ilimitado</td>
-					<td style="text-align: center;">
-						10</td>
-				</tr>
-			</tbody>
-		</table>
-		<p style="text-align: center;">
-			<span style="color:#ff0000;">OBS: Ap&oacute;s as 10 vendas ser&aacute; necess&aacute;rio assinar um dos planos abaixo!</span></p>
-		<hr />
-		<table align="center" border="1" cellpadding="1" cellspacing="1" style="width: 500px">
-			<tbody>
-				<tr>
-					<td style="text-align: center;">
-						PLANO MENSAL</td>
-				</tr>
-			</tbody>
-		</table>
-		<table align="center" border="1" cellpadding="1" cellspacing="1" style="width: 500px">
-			<tbody>
-				<tr>
-					<td style="text-align: center;">
-						<strong>Mensalidade</strong></td>
-					<td style="text-align: center;">
-						<strong>QT/ITEM</strong></td>
-					<td style="text-align: center;">
-						<strong>QT/VENDAS</strong></td>
-				</tr>
-				<tr>
-					<td style="text-align: center;">
-						R$ 104,90</td>
-					<td style="text-align: center;">
-						ilimitado</td>
-					<td style="text-align: center;">
-						ilimitado</td>
-				</tr>
-			</tbody>
-		</table>
-		<hr />
-		<table align="center" border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
-			<tbody>
-				<tr>
-					<td style="text-align: center;">
-						PLANO POR VENDAS</td>
-				</tr>
-			</tbody>
-		</table>
-		<table align="center" border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
-			<tbody>
-				<tr>
-					<td style="text-align: center;">
-						<strong>VENDA</strong></td>
-					<td style="text-align: center;">
-						<strong>QT/ITEM</strong></td>
-					<td style="text-align: center;">
-						<strong>QT/VENDAS</strong></td>
-				</tr>
-				<tr>
-					<td style="text-align: center;">
-						R$ 0,50</td>
-					<td style="text-align: center;">
-						ilimitado</td>
-					<td style="text-align: center;">
-						ilimitado<br />
-						&nbsp;</td>
-				</tr>
-				<tr>
-					<td colspan="3" style="text-align: center;">
-						<strong><span style="color:#0000ff;">50 CENTAVOS POR VENDA</span></strong></td>
-				</tr>
-				<tr>
-					<td colspan="3" style="text-align: center;">
-						<span style="color:#ff0000;">Pagamento gerado no final do m&ecirc;s via Boleto ou Deposito&nbsp;</span></td>
-				</tr>
-			</tbody>
-		</table>
-		<hr />
-		<p style="text-align: center;">
-			cadastr j&aacute; sua empresa via Whatsapp</p>
-		<h2 style="text-align: center;">
-			(99)9 8185-8832<img alt="" src="http://blog.jovempan.uol.com.br/radioatividade/wp-content/uploads/2015/06/whatsapp.png" style="width: 50px; height: 51px;" /></h2>
-		<hr />
-		<p style="text-align: center;">
-			<span style="color:#ff0000;"><font face="comic sans ms, cursive"><b>(Equipe DELIVERY BDC)</b></font></span></p>
-		<p style="text-align: center;">
-			<font color="#ff0000" face="comic sans ms, cursive"><b>Barra do Corda-MA</b></font></p>
-		<p>
-			&nbsp;</p>
-	</body>
-</ons-page>
+  </ons-toolbar>
+
+<ons-tabbar>
+  <ons-tab label="Grátis" page="tab1.html" active>
+  </ons-tab>
+  <ons-tab label="Pedido" page="tab2.html">
+  </ons-tab>
+  <ons-tab label="Mensal" page="tab3.html">
+  </ons-tab>
+</ons-tabbar>
+
+<ons-template id="tab1.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="center">Teste Grátis</div>
+    </ons-toolbar>
+  <ons-card>
+    <div class="content">
+  </ons-card>
+    <p style="text-align: center;">
+      Fale com a nossa central de atendimento
+    <p style="text-align: center;">
+      via whatsapp (99)98185-8832
+           
+           <ons-list>
+        <ons-list-item>Receba 10 Pedidos sem custo</ons-list-item>
+        <ons-list-item>Suporte Ilimitado</ons-list-item>
+        <ons-list-item>Notificações Grátis</ons-list-item>
+        
+      </ons-list>
+      
+    </p>
+  </ons-page>
+</ons-template>
+
+<ons-template id="tab2.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="center">Por Pedido Confirmado!</div>
+    </ons-toolbar>
+  <ons-card>
+    <div class="content">
+  </ons-card>
+    <p style="text-align: center;">
+      Fale com a nossa central de atendimento
+    <p style="text-align: center;">
+      via whatsapp (99)98185-8832
+           
+           <ons-list>
+        <ons-list-item>Pague apenas 50 centavos por pedido confirmado!</ons-list-item>
+        <ons-list-item>Pague somente no final do mês!</ons-list-item>
+        <ons-list-item>Suporte Ilimitado</ons-list-item>
+        <ons-list-item>Notificações Grátis</ons-list-item>
+        
+      </ons-list>
+      
+    </p>
+  </ons-page>
+</ons-template>
+<ons-template id="tab3.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="center">Mensalidade R$104,90</div>
+    </ons-toolbar>
+  <ons-card>
+    <div class="content">
+  </ons-card>
+    <p style="text-align: center;">
+      Fale com a nossa central de atendimento
+    <p style="text-align: center;">
+      via whatsapp (99)98185-8832
+           
+           <ons-list>
+        <ons-list-item>Tudo ilimitado!</ons-list-item>
+        <ons-list-item>mensalidade R$104,90</ons-list-item>
+        <ons-list-item>Suporte Ilimitado</ons-list-item>
+        <ons-list-item>Notificações Grátis</ons-list-item>
+        
+      </ons-list>
+      
+    </p>
+  </ons-page>
 </script>
 
 <script type="text/ons-template" id="home.html">
