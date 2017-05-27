@@ -5779,8 +5779,7 @@ function reInitTrackMap(data)
    
     stopTrackMapInterval();
 	track_order_map_interval = setInterval(function(){runTrackMap()}, 9000);  
-    	
-<ons-page id="page-home" on-device-backbutton="exitKApp()" sliding-menu-ignore="true" modifier="mybg" >
+    
 
 .page__background.page--mybg__background{
 background:url("images/b6.jpg") no-repeat center center;
