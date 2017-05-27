@@ -139,7 +139,9 @@
 </script>
 <script type="text/ons-template" id="cancelamentos.html">   
 <ons-page id="page-enter-contact" >
-  <ons-navigator title="Navigator" var="sNavigator"> 
+  <ons-navigator title="Navigator" var="kNavigator">
+  <ons-page id="page-home" on-device-backbutton="exitKApp()" sliding-menu-ignore="true" >
+  
   <div class="left"><ons-back-button></ons-back-button></div>
   <ons-toolbar>        
      <div class="left"><ons-back-button></ons-back-button></div>                      
