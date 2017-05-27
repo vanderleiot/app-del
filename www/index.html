@@ -190,8 +190,6 @@
      </span>
      </div>
    </ons-toolbar>
-   
-   <div class="wrapper" style="margin-top:10px;">
 		<body>
 		<h3 style="color: blue; text-align: center;">
 			<span style="font-size:24px;">Para novos estabelecimentos cadastrados!</span></h3>
@@ -319,7 +317,11 @@
       </div>    
     </ons-toolbar>
     <div class="home-header">
-   <button class="trn button green-btn button--large" onclick="showLogin();" data-trn-key="login">Log In</button>
+   <div class="wrapper center wrapper-white page-login-fb">   
+      <button class="button blue-btn button--large fb-loginbutton" id="fb-loginbutton" onclick="myFacebookLogin();">
+        <ons-icon icon="fa-facebook"></ons-icon> 
+        <span class="sigin_fb trn" data-trn-key="sigin_fb">Sign in with Facebook</span>
+      </button>
     </div> 
        
     <div class="home-page wrapper center">       
@@ -1586,8 +1588,8 @@
    <ons-list class="list-dim-text" id="item-history">                   
    </ons-list>
    
-   /*<div id="re-order-wrap"> */  
-   /*</div>*/
+   <!--<div id="re-order-wrap"> -->
+  <!-- </div>-->
 </ons-page>
 </script>  
 
