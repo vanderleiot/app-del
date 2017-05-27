@@ -143,35 +143,19 @@
   </ons-page> 
 </script>
 <script type="text/ons-template" id="cancelamentos.html">     
-<script type="text/ons-template" id="planos.html">   
-<ons-navigator title="Navigator" var="sNavigator"> 
-<ons-page id="page-settings" on-device-backbutton="backtoHome()" >
-   <ons-toolbar>     
-   
-    <div class="left">
-     <ons-toolbar-button onclick="setHome();">
-        <ons-icon icon="fa-chevron-left"></ons-icon>
-     </ons-toolbar-button>        
-    </div> 
-     <span class="trn" data-trn-key="enter_your_contact" >
-      Planos Empresa
-     </span>
-     </div>
-   </ons-toolbar>
-   
-   <div class="wrapper" style="margin-top:10px;">
-	<body>
-		<p style="text-align: center;">
-			PARA CANCELAMENTOS</p>
-		<p style="text-align: center;">
-			<img alt="" src="http://blog.jovempan.uol.com.br/radioatividade/wp-content/uploads/2015/06/whatsapp.png" style="width: 200px; height: 202px;" /></p>
-		<p style="text-align: center;">
-			<span style="font-size:16px;"><span style="font-family:comic sans ms,cursive;"><strong>(99)9 8185-8832</strong></span></span></p>
-		<p style="text-align: center;">
-			<font face="comic sans ms, cursive"><b>Obrigat&oacute;rio informar o N&ordm; do seu pedido!</b></font></p>
-		<p style="text-align: center;">
-			<span style="color:#ff0000;"><font face="comic sans ms, cursive"><b>(Equipe DELIVERY BDC)</b></font></span></p>
-	</body>
+<ons-page id="helloworld-page">
+  <ons-toolbar>
+    <div class="center"></div>
+    <div class="right">
+      <ons-toolbar-button>
+        <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+      </ons-toolbar-button>
+    </div>
+  </ons-toolbar>
+
+  <p style="text-align: center">
+    <ons-button>Click!</ons-button>
+  </p>
 </ons-page>
 </script>
 	
@@ -316,12 +300,8 @@
         <ons-toolbar-button ng-click="menu.toggleMenu()"><ons-icon icon="fa-bars"></ons-icon></ons-toolbar-button>        
       </div>    
     </ons-toolbar>
-    <div class="home-header">
-   <div class="wrapper center wrapper-white page-login-fb">   
-      <button class="button blue-btn button--large fb-loginbutton" id="fb-loginbutton" onclick="myFacebookLogin();">
-        <ons-icon icon="fa-facebook"></ons-icon> 
-        <span class="sigin_fb trn" data-trn-key="sigin_fb">Sign in with Facebook</span>
-      </button>
+    <div class="home-header"> 
+
     </div> 
        
     <div class="home-page wrapper center">       
