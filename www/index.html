@@ -73,7 +73,7 @@
   <div class="myloader"></div>    
 </ons-modal>
 
-<ons-sliding-menu main-page="home.html" menu-page="menu.html" side="left" var="menu" close-on-tap type="push" >
+<ons-sliding-menu main-page="login.html" menu-page="menu.html" side="left" var="menu" close-on-tap type="push" >
 </ons-sliding-menu>
 
 <script type="text/ons-template" id="menu.html">
@@ -261,7 +261,7 @@
 
 <script type="text/ons-template" id="home.html">
 <ons-navigator title="Navigator" var="kNavigator">
-  <ons-page id="page-home" on-device-backbutton="exitKApp()" sliding-menu-ignore="true" modifier="mybg" >      
+  <ons-page id="page-home" on-device-backbutton="exitKApp()" sliding-menu-ignore="true" >      
     <ons-toolbar>
       <div class="left">
         <ons-toolbar-button ng-click="menu.toggleMenu()"><ons-icon icon="fa-bars"></ons-icon></ons-toolbar-button>        
