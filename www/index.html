@@ -125,7 +125,7 @@
     </ons-list-item>
 
     <ons-list-item onclick="menu.setMainPage('cancelamentos.html', {closeMenu: true})" class="bottom-menu-item">
-      <ons-icon icon="ion-android-contact"></ons-icon> 
+      <ons-icon icon="ion-android-file"></ons-icon> 
       <span class="trn" data-trn-key="cancelar_pedido">Cancelamentos</span>
     </ons-list-item>      
     
@@ -144,18 +144,24 @@
 </script>
 <script type="text/ons-template" id="cancelamentos.html">     
 <ons-page id="helloworld-page">
+  <ons-progress-bar indeterminate></ons-progress-bar>
   <ons-toolbar>
     <div class="center"></div>
-    <div class="right">
-      <ons-toolbar-button>
-        <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
-      </ons-toolbar-button>
-    </div>
+   <div class="left">
+     <ons-toolbar-button onclick="setHome();">
+        <ons-icon icon="fa-chevron-left"></ons-icon>
+     </ons-toolbar-button>        
+    </div> 
   </ons-toolbar>
 
   <p style="text-align: center">
-    <ons-button>Click!</ons-button>
+    <ons-button>CANCELAMENTOS</ons-button>
   </p>
+  <ons-card>
+    <img src="http://deliver.shopbdc.com.br/5.png" alt="Onsen UI" style="width: 100%">
+    <div class="title">
+        <p style="text-align: center">
+      VIA WHATSAPP
 </ons-page>
 </script>
 	
