@@ -20,8 +20,7 @@
     <preference name="phonegap-version" value="cli-6.5.0" />
         
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
-    <gap:plugin name="phonegap-plugin-push" source="npm" spec="1.5.3" />
-    <gap:plugin name="com.paypal.cordova.mobilesdk" source="npm"  />                
+    <gap:plugin name="phonegap-plugin-push" source="npm" spec="1.5.3" />                
     <gap:plugin name="cordova-plugin-device" source="npm" />        
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />        
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />    
