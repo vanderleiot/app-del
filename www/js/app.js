@@ -5779,6 +5779,60 @@ function reInitTrackMap(data)
    
     stopTrackMapInterval();
 	track_order_map_interval = setInterval(function(){runTrackMap()}, 9000);  
+}
+	const homePage = {
+  template: '#home',
+  props: ['myProp']
+};
+
+const newsPage = {
+  template: '#news'
+};
+
+const settingsPage = {
+  template: '#settings'
+};
+
+new Vue({
+  el: '#app',
+  template: '#main',
+  data() {
+    return {
+      activeIndex: 0,
+      tabs: [
+        {
+          icon: this.md() ? null : 'ion-home',
+          label: 'Inicio',
+          page: homePage,
+          props: {
+            myProp: 'This is a page prop!'
+          }
+        },
+        {
+          icon: this.md() ? null : 'ion-ios-bell',
+          label: 'Planos',
+          page: newsPage,
+          badge: 2
+        },
+        {
+          icon: this.md() ? null : 'ion-ios-settings',
+          label: 'Aviso',
+          page: settingsPage
+        }
+      ]
+    };
+  },
+  methods: {
+    md() {
+      return this.$ons.platform.isAndroid();
+    }
+  },
+  computed: {
+    title() {
+      return this.tabs[this.activeIndex].label;
+    }
+  }
+});
     
 }
 
