@@ -102,7 +102,7 @@ position:relative;
 /*background-color: #333;
 color: white;*/
 /*background-color:#363535; color:#868686;*/
-background-color:#F2F2F3;
+background-color:#01DFA5;
 color:#333;
 }
 
@@ -124,7 +124,7 @@ font-size:15px;
 }
 
 .main-menu-list .list__item{
-border-bottom:1px solid #DFDFE0;
+border-bottom:1px solid #0B6121;
 }
 
 .bottom-menu-item span{
@@ -288,7 +288,7 @@ background:#00B279;
 
 #category-list .row{
 color:#262626;
-font-size:18px;
+font-size:20px;
 }
 
 .list-header
@@ -318,7 +318,7 @@ background-position:center !important;
 }
 
 #page-itemdisplay .title{
-border-bottom:1px solid #DDDDDD;
+border-bottom:1px solid #0B6121;
 padding-bottom: 8px;
 padding-top: 8px;
 }
@@ -336,10 +336,10 @@ font-size:14px;
 border-top:1px solid #DDDDDD;
 }
 .grey-border-top2{
-border-top:2px solid #DDDDDD;
+border-top:2px solid #0B6121;
 }
 .grey-border-bottom{
-border-bottom:1px solid #DDDDDD;
+border-bottom:1px solid #0B6121;
 }
 
 #page-itemdisplay .grey-border-bottom{
