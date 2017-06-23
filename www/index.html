@@ -134,6 +134,16 @@
       <span class="trn" data-trn-key="Planos Empresa">Planos Empresa</span>
     </ons-list-item>       
     
+    <ons-list-item onclick="menu.setMainPage('clientes.html', {closeMenu: true})" class="bottom-menu-item">
+      <ons-icon icon="ion-android-contact"></ons-icon> 
+      <span class="trn" data-trn-key="10 Melhores Clientes">10 Melhores Clientes</span>
+    </ons-list-item> 
+    
+    <ons-list-item onclick="menu.setMainPage('empresas.html', {closeMenu: true})" class="bottom-menu-item">
+      <ons-icon icon="ion-android-contact"></ons-icon> 
+      <span class="trn" data-trn-key="Empresas Cadastradas">Empresas Cadastradas</span>
+    </ons-list-item> 
+    
     <ons-list-item onclick="logout();" class="bottom-menu-item logout-menu">
       <ons-icon icon="ion-log-out"></ons-icon> 
       <span class="trn" data-trn-key="logout">SAIR</span>
@@ -142,6 +152,59 @@
   </ons-list>
   </ons-page> 
 </script>
+	
+		<script type="text/ons-template" id="empresas.html">     
+<ons-page id="helloworld-page">
+  <ons-progress-bar indeterminate></ons-progress-bar>
+  <ons-toolbar>
+    <div class="center"></div>
+   <div class="left">
+     <ons-toolbar-button onclick="setHome();">
+        <ons-icon icon="fa-chevron-left"></ons-icon>
+     </ons-toolbar-button>        
+    </div> 
+  </ons-toolbar>
+
+  <p style="text-align: center">
+    <ons-button>Empresas Cadastradas</ons-button>
+  </p>
+  <ons-card>
+    <img src="http://deliver.shopbdc.com.br/imagemapp/empresas1.png" alt="Onsen UI" style="width: 100%">
+    <ons-card>
+    <img src="http://deliver.shopbdc.com.br/imagemapp/empresas2.png" alt="Onsen UI" style="width: 100%">
+    <ons-card>
+    <img src="http://deliver.shopbdc.com.br/imagemapp/empresas3.png" alt="Onsen UI" style="width: 100%">
+    <ons-card>
+    <img src="http://deliver.shopbdc.com.br/imagemapp/empresas4.png" alt="Onsen UI" style="width: 100%">
+    <ons-card>
+    <img src="http://deliver.shopbdc.com.br/imagemapp/empresas5.png" alt="Onsen UI" style="width: 100%">
+    <ons-card>
+    <img src="http://deliver.shopbdc.com.br/imagemapp/empresas6.png" alt="Onsen UI" style="width: 100%">
+  
+</ons-page>
+</script>
+	
+<script type="text/ons-template" id="clientes.html">     
+<ons-page id="helloworld-page">
+  <ons-progress-bar indeterminate></ons-progress-bar>
+  <ons-toolbar>
+    <div class="center"></div>
+   <div class="left">
+     <ons-toolbar-button onclick="setHome();">
+        <ons-icon icon="fa-chevron-left"></ons-icon>
+     </ons-toolbar-button>        
+    </div> 
+  </ons-toolbar>
+
+  <p style="text-align: center">
+    <ons-button>10 Melhores Clientes</ons-button>
+  </p>
+  <ons-card>
+    <img src="http://deliver.shopbdc.com.br/imagemapp/melhoresclientes.png" alt="Onsen UI" style="width: 100%">
+  
+</ons-page>
+</script>
+	
 <script type="text/ons-template" id="cancelamentos.html">     
 <ons-page id="helloworld-page">
   <ons-progress-bar indeterminate></ons-progress-bar>
@@ -158,7 +221,7 @@
     <ons-button>CANCELAMENTOS</ons-button>
   </p>
   <ons-card>
-    <img src="http://deliver.shopbdc.com.br/cancelamentos.png" alt="Onsen UI" style="width: 100%">
+    <img src="http://deliver.shopbdc.com.br/imagemapp/cancelamentos.png" alt="Onsen UI" style="width: 100%">
   
 </ons-page>
 </script>
@@ -335,7 +398,7 @@
     <ons-button>CENTRAL WHATS (99)9 8185-8832</ons-button>
   </p>
   <ons-card>
-    <img src="http://deliver.shopbdc.com.br/5.gif" alt="Onsen UI" style="width: 100%">
+    <img src="http://deliver.shopbdc.com.br/imagemapp/homeapp.gif" alt="Onsen UI" style="width: 100%">
     
     <div class="home-page wrapper center">  
 
