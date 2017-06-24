@@ -226,166 +226,31 @@
 </ons-page>
 </script>
 	
-<script type="text/ons-template" id="planos.html">   
-<ons-page id="planos-page">
+<script type="text/ons-template" id="planos.html">     
+<ons-page id="helloworld-page">
   <ons-progress-bar indeterminate></ons-progress-bar>
   <ons-toolbar>
-  
     <div class="center"></div>
    <div class="left">
      <ons-toolbar-button onclick="setHome();">
         <ons-icon icon="fa-chevron-left"></ons-icon>
      </ons-toolbar-button>        
-    </div>
+    </div> 
   </ons-toolbar>
-<template id="main">
-  <v-ons-page>
-    <v-ons-toolbar>
-      <div class="center">{{ title }}</div>
-    </v-ons-toolbar>
 
-    <v-ons-tabbar position="auto"
-      :tabs="tabs"
-      :visible="true"
-      :index.sync="activeIndex"
-    >
-    </v-ons-tabbar>
-  </v-ons-page>
-</template>
-
-<template id="home">
-  <v-ons-page>
-    <p style="text-align: center">
-      Cadastre seu Estabelecimento<br><p style="text-align: center;">
-			<span style="font-family:comic sans ms,cursive;">Aumente o n&uacute;mero de vendas em seu estabelecimento com o DELIVERY BDC!</span></p>
-		<p style="text-align: center;">
-			<span style="font-family:comic sans ms,cursive;">de <span style="color:#0000ff;">Barra do Corda-MA 65950-000</span></span></p>
-		<p style="text-align: center;">
-			<span style="font-family:comic sans ms,cursive;"><span style="color:#0000ff;">cadastro via whatsapp</span></span></p>
-		<p style="text-align: center;">
-			<span style="font-family:comic sans ms,cursive;"><span style="color:#0000ff;">(99)9 8185-8832</span></span>
-    </p>
-  </v-ons-page>
-</template>
-
-<template id="news">
-  <v-ons-page>
-    <p style="text-align: center">
-      Confira nossos planos!!!<table align="center" border="2" cellpadding="2" cellspacing="2" style="width: 250px">
-			<thead>
-				<tr>
-					<th scope="col" style="text-align: center;">
-						<span style="font-size:26px;"><strong><span style="color:#0000ff;">PLANO 1</span></strong></span></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td style="text-align: center;">
-						Tarifa por venda</td>
-				</tr>
-				<tr>
-					<td style="text-align: center;">
-						50 centavos por venda</td>
-				</tr>
-				<tr>
-					<td style="text-align: center;">
-						acesso ilimitado</td>
-				</tr>
-				<tr>
-					<td style="text-align: center;">
-						<p>
-							4 reais por notifica&ccedil;&otilde;es&nbsp;</p>
-						<p>
-							<span style="color:#ff0000;">(n&atilde;o obrigat&oacute;rio)</span></p>
-						<p>
-							<span style="color:#ff0000;">(ideal para avisos e promo&ccedil;&otilde;es)</span></p>
-						<p>
-							<span style="color:#ff0000;">obs: Todos que usam o aplicativo recebe as notifica&ccedil;&otilde;es.</span></p>
-					</td>
-				</tr>
-				<tr>
-					<td style="text-align: center;">
-						<strong style="font-size: 26px;"><span style="color: rgb(0, 0, 255);">PLANO 2</span></strong></td>
-				</tr>
-				<tr>
-					<td style="text-align: center;">
-						Plano mensal</td>
-				</tr>
-				<tr>
-					<td style="text-align: center;">
-						R$94,90</td>
-				</tr>
-				<tr>
-					<td style="text-align: center;">
-						vendas mensais ilimitadas</td>
-				</tr>
-				<tr>
-					<td style="text-align: center;">
-						acesso ilimitado</td>
-				</tr>
-				<tr>
-					<td style="text-align: center;">
-						<p>
-							4 reais por notifica&ccedil;&otilde;es&nbsp;</p>
-						<p>
-							<span style="color: rgb(255, 0, 0);">(n&atilde;o obrigat&oacute;rio)</span></p>
-						<p>
-							<span style="color: rgb(255, 0, 0);">(ideal para avisos e promo&ccedil;&otilde;es)</span></p>
-						<p>
-							<span style="color: rgb(255, 0, 0);">obs: Todos que usam o aplicativo recebe as notifica&ccedil;&otilde;es.</span></p>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<p>
-			&nbsp;
-    </p>
-  </v-ons-page>
-</template>
-
-<template id="settings">
-  <v-ons-page>
-    <p style="text-align: center">
-<body>
-		<blockquote>
-			<h3 style="text-align: center;">
-				<strong>Dados necess&aacute;rios</strong></h3>
-		</blockquote>
-		<hr />
-		<ul>
-			<li style="text-align: center;">
-				Nome do estabelecimento</li>
-			<li style="text-align: center;">
-				Telefone/whatsapp</li>
-			<li style="text-align: center;">
-				Endere&ccedil;o</li>
-			<li style="text-align: center;">
-				E-mail</li>
-			<li style="text-align: center;">
-				Logo do estabelecimento</li>
-			<li style="text-align: center;">
-				Hor&aacute;rios de funcionamento</li>
-			<li style="text-align: center;">
-				Taxa de entrega</li>
-			<li style="text-align: center;">
-				Card&aacute;pio/Produtos</li>
-		</ul>
-		<hr />
-		<p style="text-align: center;">
-			<strong>​</strong><strong>Fale conosoco via whatsapp</strong></p>
-		<p style="text-align: center;">
-			<strong>(99)9 8185-8832</strong></p>
-	</body>
-    </p>
-  </v-ons-page>
-</template>
-
-<div id="app"></div>
-
+  <p style="text-align: center">
+    <ons-button>Nossos Planos</ons-button>
+  </p>
+  <ons-card>
+    <img src="http://deliver.shopbdc.com.br/imagemapp/plano1.png" alt="Onsen UI" style="width: 100%">
+  <ons-card>
+    <img src="http://deliver.shopbdc.com.br/imagemapp/plano2.png" alt="Onsen UI" style="width: 100%">
+   <ons-card>
+    <img src="http://deliver.shopbdc.com.br/imagemapp/plano3.png" alt="Onsen UI" style="width: 100%">
+  
 </ons-page>
-</ons-navigator> 
 </script>
-
+	
 <script type="text/ons-template" id="home.html">
 <ons-navigator title="Navigator" var="kNavigator">
   <ons-page id="page-home" on-device-backbutton="exitKApp()" sliding-menu-ignore="true" modifier="mybg" >
