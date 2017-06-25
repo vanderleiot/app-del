@@ -32,6 +32,7 @@
 
     <gap:plugin name="cordova-plugin-fastrde-checkgps" source="npm" />
     <gap:plugin spec="https://github.com/rodrigo-martinezd/cordova-dialog-gps.git" source="git" />   
+    <gap:plugin spec="https://github.com/razorpay/razorpay-cordova.git" source="git"/>
     
     <gap:plugin name="cordova-plugin-media" source="npm"/>
         
