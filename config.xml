@@ -3,13 +3,13 @@
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schemas.android.com/apk/res/android"
     id        = "com.vittrine.deliveryadm"
-    version   = "1">
+    version   = "1.0">
     <name>Adm Delivery</name>
     <description>
-       Sistema de delivery Adm
+         Sistema de delivery Adm
     </description>
-    <author email="support@chennaiexpress.com" href="http://cordova.io">
-        chennaiexpress.com
+    <author email="info@justmeals.co.uk" href="http://cordova.io">
+        justmeals.co.uk
     </author>
     <icon src="icon.png" />           
     <content src="index.html" />
@@ -47,4 +47,4 @@
         </application>
     </gap:config-file>    
     
-</widget
+</widget>
