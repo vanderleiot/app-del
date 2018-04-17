@@ -2,11 +2,11 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schemas.android.com/apk/res/android"
-    id        = "chennaiexpress.ordertaking.app"
+    id        = "com.vittrine.deliveryadm"
     version   = "1">
-    <name>Chennai Express Order Taking App</name>
+    <name>Adm Delivery</name>
     <description>
-        Chennai Express Order Taking App
+       Sistema de delivery Adm
     </description>
     <author email="support@chennaiexpress.com" href="http://cordova.io">
         chennaiexpress.com
