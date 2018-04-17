@@ -46,9 +46,7 @@
 <body>
 
 <ons-modal var="kloader">
-  <ons-icon icon="fa-circle-o-notch" spin="true"></ons-icon>
-  <br>
-  <br> <span class="trn" data-trn-key="please_wait">Please wait</span>.  
+  <div class="myloader"></div>
 </ons-modal>
 
 
@@ -167,7 +165,7 @@
 
 <script type="text/ons-template" id="slidemenu.html">
 <ons-page id="page-slidemenu" >
-<ons-sliding-menu main-page="home.html" menu-page="menu.html" side="left" var="menu" close-on-tap type="overlay" >
+<ons-sliding-menu main-page="home.html" menu-page="menu.html" side="left" var="menu" close-on-tap type="push" >
 </ons-sliding-menu>
 </ons-page>
 </script>
@@ -205,7 +203,7 @@
 </script>
 
 <script type="text/ons-template" id="home.html">
-  <ons-page id="page-home" on-device-backbutton="deviceBackButton()" >
+  <ons-page id="page-home" on-device-backbutton="deviceBackButton()" sliding-menu-ignore="true" >
 
     <input type="hidden" name="tab-action" id="tab-action" class="tab-action" value="GetTodaysOrder">
     <input type="hidden" name="display-div" id="display-div" class="display-div" value="new-orders">
@@ -224,12 +222,16 @@
      <ons-toolbar-button onclick="showSearchPopUp();" ><ons-icon icon="ion-search">
      </ons-icon></ons-toolbar-button>
      
-    <ons-toolbar-button onclick="showNotificationPage();" ><ons-icon icon="fa-globe"></ons-icon></ons-toolbar-button>
+    <ons-toolbar-button onclick="showNotificationPage();" >
+       <div class="notification notification-count" ></div>
+       <ons-icon icon="fa-globe"></ons-icon>
+     </ons-toolbar-button>
+     
      </div> 
                   
     </ons-toolbar> 
     
-    <ons-tabbar position="top">
+    <ons-tabbar position="top" var="tabbar" class="main-home-tab">
     
 <ons-tab page="ordersToday.html"active="true" class="tabs">
  <ons-icon icon="ion-ios-briefcase-outline" class="tabicon"></ons-icon>
@@ -244,6 +246,11 @@
     <ons-tab page="allOrders.html" class="tabs">
      <ons-icon icon="ion-ios-paper-outline" class="tabicon"></ons-icon>
  <p class="trn concat-text" data-trn-key="all_orders">All Orders</p>
+    </ons-tab>    
+    
+    <ons-tab page="bookingTab.html" class="tabs">
+     <ons-icon icon="ion-android-restaurant" class="tabicon"></ons-icon>
+ <p class="trn concat-text" data-trn-key="booking">Booking</p>
     </ons-tab>    
     
    </ons-tabbar>
@@ -323,7 +330,7 @@
 <script type="text/ons-template" id="displayOrder.html">    
 <ons-page id="page-displayOrder">
    <ons-toolbar>          
-    <div class="left"><ons-back-button></ons-back-button></div> 
+    <div class="left"><ons-back-button onclick="OrderRefresh();"></ons-back-button></div> 
     <div class="center white" id="order-details-page-title">      
     </div>   
     
@@ -335,6 +342,19 @@
    
    <input type="hidden" name="order_id" id="order_id" class="order_id">
    <input type="hidden" name="trans_type" id="trans_type" class="trans_type">
+   <input type="hidden" name="task_id" id="task_id" class="task_id">
+   <input type="hidden" name="assign_driver_label" id="assign_driver_label" >
+   
+   
+   <input type="hidden" name="task_lat" id="task_lat" class="task_lat" >
+   <input type="hidden" name="task_lng" id="task_lng" class="task_lng" >
+   <input type="hidden" name="task_address" id="task_address" class="task_address" >
+   
+   <input type="hidden" name="driver_lat" id="driver_lat" class="driver_lat" >
+   <input type="hidden" name="driver_lng" id="driver_lng" class="driver_lng" >
+   <input type="hidden" name="driver_name" id="driver_name" class="driver_name" >
+   <input type="hidden" name="driver_phone" id="driver_phone" class="driver_phone" >
+   <input type="hidden" name="driver_location" id="driver_location" class="driver_location" >
    
     <ons-list id="order-details" class="order-details">        
     </ons-list> 
@@ -364,10 +384,44 @@
      <button class="trn button green-btn button--large" onclick="changeOrderStatus();" data-trn-key="change_order_status">
 	  Change Order Status
 	  </button>
-     </ons-col>              
-     </ons-col>
+     </ons-col>                   
     </ons-row>    
     </div>     
+    
+    <div class="wrapper order-details actions-3">    
+    <ons-row>        
+     <ons-col>     
+     <button class="trn button green-btn button--large" onclick="changeOrderStatus();" data-trn-key="change_status">
+	  Change Status
+	  </button>
+     </ons-col>     
+     
+     <ons-col>            
+       <button class="trn button grey-btn button--large" onclick="assignDriver();">
+	    <span class="assign_driver_label"></span>
+	  </button>
+     </ons-col>     
+          
+    </ons-row>    
+    </div>     
+    
+    <div class="wrapper order-details actions-4">    
+    <ons-row>        
+     <ons-col>     
+     <button class="trn button green-btn button--large" onclick="changeOrderStatus();" data-trn-key="change_status">
+	  Change Status
+	  </button>
+     </ons-col>     
+     
+     <ons-col>            
+       <button class="button grey-btn button--large" onclick="TrackOrder();">
+	    <span class="trn" data-trn-key="track_order">Track Order</span>
+	  </button>
+     </ons-col>     
+          
+    </ons-row>    
+    </div>     
+    
      
 </ons-page>
 </script>
@@ -443,9 +497,9 @@
 
 
 <script type="text/ons-template" id="changesStatus.html">    
-<ons-page id="page-changesStatus">
+<ons-page id="page-changesStatus" on-device-backbutton="setButtonTask2();" >
    <ons-toolbar>          
-    <div class="left"><ons-back-button></ons-back-button></div>     
+    <div class="left"><ons-back-button onclick="setButtonTask();"></ons-back-button></div>     
     <div class="center white trn" data-trn-key="change_status">
       Change Status
     </div>   
@@ -491,6 +545,13 @@
    		   
    <div class="wrapper">
    
+     <div class="settings-header trn" data-trn-key="software_version">Software Version</div>
+     <ons-list modifier="inset" class="settings-list">        
+        <ons-list-item >
+          <span class="software_version_text concat-text"></span>          
+        </ons-list-item>
+      </ons-list>
+   
      <div class="settings-header trn" data-trn-key="device_id">Device ID</div>
      <ons-list modifier="inset" class="settings-list">        
         <ons-list-item >
@@ -512,6 +573,84 @@
         <ons-list-item modifier="chevron" onclick="showLanguageList();" class="trn" data-trn-key="select_your_language">
           Select your language
         </ons-list-item>        
+      </ons-list>
+      
+      <div class="settings-header trn" data-trn-key="food_item_options">Food Item Options</div>
+      <p class="trn small-font-dim" data-trn-key="item_not_available" style="text-indent: 10px" >
+      If item is not available do the following actions
+      </p>
+      
+      <ons-list modifier="inset" class="settings-list">        
+      
+        <ons-list-item >
+          <span class="trn" data-trn-key="hide">Hide</span>
+          <ons-switch modifier="list-item" var="food_option_not_available" name="food_option_not_available" id="food_option_not_available" onchange="foodOptions(1)"  ></ons-switch>
+        </ons-list-item>
+        
+        <ons-list-item >
+          <span class="trn" data-trn-key="disabled">Disabled</span>
+          <ons-switch modifier="list-item" var="food_option_not_available_disabled" name="food_option_not_available_disabled" id="food_option_not_available_disabled" onchange="foodOptions(2)"   ></ons-switch>
+        </ons-list-item>
+      
+     </ons-list>
+        
+     <div class="settings-header trn" data-trn-key="merchant_settings">Merchant Settings</div>
+     <ons-list modifier="inset" class="settings-list">        
+        <ons-list-item >
+          <span class="trn" data-trn-key="merchant_close_store">Close Store</span>
+          <ons-switch modifier="list-item" var="merchant_close_store" name="merchant_close_store" id="merchant_close_store" ></ons-switch>
+        </ons-list-item>
+        
+        <ons-list-item >
+          <span class="trn" data-trn-key="show_time">Show Merchant Current Time</span>
+          <ons-switch modifier="list-item" var="merchant_show_time" name="merchant_show_time" id="merchant_show_time" ></ons-switch>
+        </ons-list-item>
+        
+        <ons-list-item >
+          <span class="trn" data-trn-key="disabled_ordering">Disabled Ordering</span>
+          <ons-switch modifier="list-item" var="merchant_disabled_ordering" name="merchant_disabled_ordering" id="merchant_disabled_ordering" ></ons-switch>
+        </ons-list-item>
+        
+      </ons-list>
+      
+      <div class="settings-header trn" data-trn-key="voucher">Voucher</div>
+      <ons-list modifier="inset" class="settings-list">        
+      
+       <ons-list-item >
+          <span class="trn" data-trn-key="enabled_voucher">Enabled Voucher</span>
+          <ons-switch modifier="list-item" var="merchant_enabled_voucher" name="merchant_enabled_voucher" id="merchant_enabled_voucher" ></ons-switch>
+        </ons-list-item>
+        
+        <ons-list-item >
+          <span class="trn" data-trn-key="make_delivery_time_required">Make Delivery Time Required</span>
+          <ons-switch modifier="list-item" var="merchant_required_delivery_time" name="merchant_required_delivery_time" id="merchant_required_delivery_time" ></ons-switch>
+        </ons-list-item>
+      
+      </ons-list>
+      
+      <div class="settings-header trn" data-trn-key="tips">Tips</div>
+      <ons-list modifier="inset" class="settings-list">        
+      
+       <ons-list-item >
+          <span class="trn" data-trn-key="enabled_tip">Enabled Tip</span>
+          <ons-switch modifier="list-item" var="merchant_enabled_tip" name="merchant_enabled_tip" id="merchant_enabled_tip" ></ons-switch>
+        </ons-list-item>
+               
+      </ons-list>
+      
+      <div class="settings-header trn" data-trn-key="table_booking">Table Booking</div>
+      <ons-list modifier="inset" class="settings-list">        
+      
+       <ons-list-item >
+          <span class="trn" data-trn-key="disabled_table_booking">Disabled Table Booking</span>
+          <ons-switch modifier="list-item" var="merchant_table_booking" name="merchant_table_booking" id="merchant_table_booking" ></ons-switch>
+        </ons-list-item>
+        
+       <ons-list-item >
+          <span class="trn" data-trn-key="accept_booking_sameday">Accept booking same day</span>
+          <ons-switch modifier="list-item" var="accept_booking_sameday" name="accept_booking_sameday" id="accept_booking_sameday" ></ons-switch>
+        </ons-list-item> 
+               
       </ons-list>
             
    
@@ -610,10 +749,10 @@
 
 
 <script type="text/ons-template" id="orderHistory.html">    
-<ons-page id="page-orderHistory">
+<ons-page id="page-orderHistory" on-device-backbutton="setButtonTask2();" >
 
    <ons-toolbar>        
-    <div class="left"><ons-back-button></ons-back-button></div>              
+    <div class="left"><ons-back-button onclick="setButtonTask()" ></ons-back-button></div>              
     <div class="center white">
       <span class="order-history-title"></span>
     </div>
@@ -976,6 +1115,137 @@
 	  	  	   
   </ons-page>
   </ons-dialog> 
+</script>
+
+
+<script type="text/ons-template" id="assignDriver.html">    
+<ons-page id="page-assignDriver" on-device-backbutton="setButtonTask2();" >
+   <ons-toolbar>          
+    <div class="left"><ons-back-button onclick="setButtonTask()"></ons-back-button></div>     
+    <div class="center white assign-driver-title" >
+      
+    </div>   
+   </ons-toolbar>
+   
+   <form id="frm-assigntask" class="frm-assigntask" method="post">       
+   
+   <input type="hidden" name="team_id" class="team_id"  >
+   <input type="hidden" name="driver_id" class="driver_id" >
+   <input type="hidden" name="task_id" class="task_id" >
+   
+     <ons-list>       
+     
+       <ons-list-item modifier="chevron" onclick="showTeamList();" > 
+       <span class="trn team_selected" data-trn-key="select_team">Select Team</span>       
+       </ons-list-item>    
+       
+       <ons-list-item modifier="chevron" onclick="showDriverList();" > 
+       <span class="trn driver_selected" data-trn-key="assign_driver">Assign Driver</span>       
+       </ons-list-item>    
+       
+     </ons-list>   
+     
+      <div class="wrapper">
+      <button class="booking-btn trn button green-btn button--large" onclick="assignTask();" data-trn-key="assign">	    
+      Assign
+      </button>
+      </div>
+   
+   </form>   
+   </ons-page>
+</script>   
+
+<script type="text/ons-template" id="teamList.html">    
+  <ons-dialog var="teamListDialog" style="width:90%;height:250px;" cancelable  >
+     
+   <ons-toolbar inline>
+      <div class="center white trn" data-trn-key="select_team" >
+        Select Team
+      </div>
+    </ons-toolbar>
+    
+   <ons-scroller>
+      <ons-list id="team-list" class="team-list">           
+      </ons-list>
+    </ons-scroller>
+  
+  </ons-page>
+</script>
+
+
+<script type="text/ons-template" id="driverList.html">    
+  <ons-dialog var="driverListDialog" style="width:90%;height:250px;" cancelable  >
+     
+   <ons-toolbar inline>
+      <div class="center white trn" data-trn-key="assign_driver" >
+        Assign Driver
+      </div>
+    </ons-toolbar>
+    
+   <ons-scroller>
+      <ons-list id="driver-list" class="driver-list">          
+      </ons-list>
+    </ons-scroller>
+  
+  </ons-page>
+</script>
+
+<script type="text/ons-template" id="map.html">   
+<ons-page id="page-map" modifier="map-page" on-device-backbutton="setButtonTask2();" >
+  
+   <ons-toolbar>        
+     <div class="left"><ons-back-button onclick="setButtonTask()"></ons-back-button></div>                      
+     <div class="center white"><span class="map_title" ></span></div>                       
+   </ons-toolbar>
+   
+   <div id="map_canvas_div">
+   
+     <div class="map-bottom-wrapper">        
+        <ons-row align="center">
+            <ons-col width="25%" class="center">
+              <img class="driver_avatar" src=""/>
+            </ons-col>
+            <ons-col>
+              <h3 class="_driver_name"></h3>
+              <p class="small-font-dim trn" data-trn-key="your_delivery_guy" >Your Delivery Guy</p>
+              <p class="small-font-dim">
+                 <span class="trn" data-trn-key="extimated_delivery" >Estimated Delivery</span>: <span class="time_left"></span> 
+              </p>
+            </ons-col>
+            <ons-col width="25%" class="center">
+               <a class="button green-btn button--large call_driver">
+				<ons-icon icon="ion-android-call">
+			   </a>
+            </ons-col>
+         </ons-row>
+     </div>
+   
+   </div> 
+      
+</ons-page>
+</script>
+
+<script type="text/ons-template" id="bookingTab.html">
+  <ons-page id="page-bookingtab">
+  
+   <ons-pull-hook on-action="loadBooking(done);" var="loader">
+    <span ng-switch="loader.getCurrentState()">
+    <span ng-switch-when="initial"><ons-icon size="35px" icon="ion-arrow-down-a">
+    </ons-icon><span class="small-font-dim"> Pull down to refresh</span></span>
+    <span ng-switch-when="preaction"><ons-icon size="35px" icon="ion-arrow-up-a">
+    </ons-icon><span class="small-font-dim"> Release to refresh</span></span>
+    <span ng-switch-when="action"><ons-icon size="35px" spin="true" icon="ion-load-d">
+    </ons-icon> <span class="small-font-dim">Loading data...</span></span>
+    </span>
+  </ons-pull-hook>
+             
+    <ons-scroller>
+      <ons-list id="newbooking-list" class="list-normal"> 
+                 
+      </ons-list>
+    </ons-scroller>
+    
+  </ons-page>
 </script>
 
 </body>
