@@ -240,13 +240,16 @@ function tplCartRowNoBorder(item_id, item_name, price, pretty_price, qty, field_
 		  htm+='<input type="hidden" name="discount" class="discount'+x+' " value="'+ discount +'" >';
 
 		  if (discount>0){
-		  	  price2='<price class="discount">'+ (parseFloat(price2)+parseFloat(discount)) +'</price> '+price2;
+		  	  //price2='<price class="discount">'+ (parseFloat(price2)+parseFloat(discount)) +'</price> '+price2;
 		  }
 		  
+		  /*alert(price2);
+		  alert(size);*/
+		  
 		  if (empty(size))	{
-		     htm+='<p class="description item-name concat-text bold"><span class="qty-label">'+qty+"x</span> "+price2+' '+item_name+'</p>';
+		     htm+='<p class="description item-name concat-text bold"><span class="qty-label">'+qty+"x</span> "+prettyPrice(price2)+' '+item_name+'</p>';
 		  } else {
-		  	htm+='<p class="description item-name concat-text bold"><span class="qty-label">'+qty+"x</span> "+price2+" "+item_name+
+		  	htm+='<p class="description item-name concat-text bold"><span class="qty-label">'+qty+"x</span> "+prettyPrice(price2)+" "+item_name+
 		  	" <size>("+size+")</size>"
 		  	+'</p>';
 		  }
@@ -279,7 +282,7 @@ function tplCartRowNoBorderSub(subcat_id, sub_item_id, item_name, price, pretty_
 		  htm+='<input type="hidden" name="sub_item_price" class="sub_item_price" value="'+price+'">';
 		  htm+='<input type="hidden" name="sub_item_name" class="sub_item_name" value="'+item_name+'">';
 		  
-		  htm+='<p class="description item-name concat-text"><span class="qty-label">'+qty+"x</span> "+price+" "+item_name+'</p>';
+		  htm+='<p class="description item-name concat-text"><span class="qty-label">'+qty+"x</span> "+prettyPrice(price)+" "+item_name+'</p>';
 	   htm+='</ons-col>';
 	   htm+='<ons-col class="text-right" ><price>'+pretty_price+'</price></ons-col>';
    htm+='</ons-row>';
@@ -317,12 +320,15 @@ function tplCartRowHiddenFields(label, value, field_name, x, class_name)
 
 function initMobileScroller()
 {	
+	
+	//https://docs.mobiscroll.com/jquery/select#localization
 	if ( $('.delivery_date').exists()){
 		$('.delivery_date').mobiscroll().date({
 			theme: 'android-holo-light', 
 			mode: "scroller",
 			display: "modal",
-			dateFormat : "yy-mm-dd"
+			dateFormat : "yy-mm-dd",
+			//lang : "de"
 		});
 	}
 	
@@ -443,5 +449,41 @@ function customFields(name, placeholder)
 	htm+='<div class="field-wrapper">';
 	  htm+='<input type="text" name="'+name+'"  class="text-input text-input--underbar" placeholder="'+placeholder+'" value="" has_validation data-validation="required" data-validation-error-msg="this field is mandatory!" >';
 	htm+='</div>';
+	return htm;
+}
+
+function DineinFields()
+{
+	var htm='';	
+	htm+='<div class="wrapper">';
+       htm+='<ons-row class="row">';
+           htm+='<ons-col class="text-big trn">'+ getTrans("Dine in information",'dine_in_information') +'</ons-col>';
+       htm+='</ons-row>';
+   htm+='</div>';
+   
+    htm+='<div class="field-wrapper">';
+      htm+='<input type="text" name="dinein_number_of_guest"  class="numeric_only2 dinein_number_of_guest text-input text-input--underbar has_validation" placeholder="'+  getTrans("Number of guest",'number_of_guest') + '" data-validation="required" data-validation-error-msg="this field is mandatory!"   >';
+   htm+='</div>';
+   
+   htm+='<div class="field-wrapper">';
+      htm+='<input type="text" name="dinein_special_instruction"  class="dinein_special_instruction text-input text-input--underbar has_validation" placeholder="'+ getTrans("Special Instructions",'special_instruction') + '" >';
+   htm+='</div> ';
+   
+	return htm;
+}
+
+function ContactNumberFields()
+{
+	var htm='';	
+	htm+='<div class="wrapper">';
+       htm+='<ons-row class="row">';
+           htm+='<ons-col class="text-big trn">'+ getTrans("Contact information",'contact_information') +'</ons-col>';
+       htm+='</ons-row>';
+   htm+='</div>';
+   
+    htm+='<div class="field-wrapper">';
+      htm+='<input type="text" name="contact_phone"  class="mobile_inputs contact_phone text-input text-input--underbar has_validation" placeholder="'+  getTrans("Contact phone",'contact_phone') + '" value="" data-validation="required" data-validation-error-msg="this field is mandatory!"   >';
+   htm+='</div>';
+      
 	return htm;
 }

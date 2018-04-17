@@ -2,50 +2,61 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schemas.android.com/apk/res/android"
-    id        = "com.hostbdc.delivery.bdc"
-    versionCode = "5"
-    version   = "1.3">
-    <name>DELIVERY BDC</name>
+    id        = "com.vittrineonline.deliveryma"
+    versionCode = "1"
+    version   = "1.0">
+    <name>Delivery MA</name>
     <description>
-        Delivery-BDC de Barra do Corda-MA
+        chennai express food ordering application
     </description>
-    <author email="central@hostbdc.com.br" href="http://cordova.io">
-        delivery.shopbdc.com.br
+    <author email="support@chennaiexpress.com" href="http://cordova.io">
+        chennaiexpress.com
     </author>
-    <icon src="icon.png" />           
+            
     <content src="index.html" />
                
-   <preference name="orientation" value="portrait" />
-    <preference name="android-build-tool" value="gradle" />    
-    <preference name="phonegap-version" value="cli-6.5.0" />
-        
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
-    <gap:plugin name="phonegap-plugin-push" source="npm" spec="1.5.3" />                
-    <gap:plugin name="cordova-plugin-device" source="npm" />        
-    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />        
-    <gap:plugin name="cordova-plugin-splashscreen" source="npm" />    
-    <gap:plugin name="cordova-plugin-geolocation" source="npm" />
-    <gap:plugin name="cordova-plugin-network-information" source="npm" />
-        
-    <gap:plugin name="cordova-plugin-request-location-accuracy" source="npm" />    
-    <gap:plugin name="cordova-plugin-x-toast" source="npm" />    
-
-    <gap:plugin name="cordova-plugin-fastrde-checkgps" source="npm" />
-    <gap:plugin spec="https://github.com/rodrigo-martinezd/cordova-dialog-gps.git" source="git" />   
-    <gap:plugin spec="https://github.com/razorpay/razorpay-cordova.git" source="git"/>
+	<preference name="orientation" value="portrait" />
+	<preference name="android-build-tool" value="gradle" />		
+		
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+	
+    <gap:plugin name="phonegap-plugin-push" source="npm" spec="1.10.5"  /> 
     
-    <gap:plugin name="cordova-plugin-media" source="npm"/>
-        
-    <gap:plugin name="cordova-plugin-googlemaps"  source="npm" spec="1.3.9" >
-       <param name="API_KEY_FOR_ANDROID" value="AIzaSyBiIj-eBTMue_khle3ZdC49SzjbskkaKaw" />
-       <param name="API_KEY_FOR_IOS" value="" />
+    <gap:plugin name="com.paypal.cordova.mobilesdk" source="npm"  />            	
+    <gap:plugin name="cordova-plugin-device" source="npm" />		
+	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" />		
+	<gap:plugin name="cordova-plugin-splashscreen" source="npm" />	
+	<gap:plugin name="cordova-plugin-geolocation" source="npm" spec="1.0.1" />
+	<gap:plugin name="cordova-plugin-network-information" source="npm" />
+		
+	<gap:plugin name="cordova-plugin-request-location-accuracy" source="npm"  spec="2.2.0" />	
+	<gap:plugin name="cordova-plugin-x-toast" source="npm" spec="2.6.0" />	
+	
+	<gap:plugin spec="https://github.com/razorpay/razorpay-cordova.git" source="git" />
+	<gap:plugin name="cordova-plugin-media" source="npm" spec="3.0.0" />	
+	<gap:plugin name="cordova.plugins.diagnostic" source="npm" spec="3.7.1" />	
+		
+    <gap:plugin name="cordova-plugin-googlemaps"  source="npm" spec="2.2.8" >
+       <param name="API_KEY_FOR_ANDROID" value="AIzaSyDq_CRXqbPtNUuTQSuxoBg9pVU66v2nD4w" />
+       <param name="API_KEY_FOR_IOS" value="AIzaSyDq_CRXqbPtNUuTQSuxoBg9pVU66v2nD4w" />
+       <param name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="Karenderia wants to use your location" />
+       <param name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="Karenderia want to always use your location" />
     </gap:plugin>
     
-    <gap:splash src="splash.png" />
-    <preference name="AutoHideSplashScreen" value="false" />      
-    <preference name="SplashScreenDelay" value="10000" />    
+    <gap:plugin name="cordova-plugin-buildinfo" source="npm" spec="1.1.0"  />
+    
+    <gap:plugin name="cordova-plugin-googleplus" source="npm">
+     <variable name="REVERSED_CLIENT_ID" value="" />
+    </gap:plugin>
+		
+    <platform name="android" />    
+    <platform name="ios" /> 
+    		    
+	<preference name="AutoHideSplashScreen" value="true" />  	
+    <preference name="SplashScreenDelay" value="5000" />    
     <preference name="fullscreen" value="false" />
     <preference name="android-minSdkVersion" value="16" />     
+    <preference name="ShowSplashScreenSpinner" value="true" />	   
     
     <access origin="*" />
     <access origin="tel:*" launch-external="yes" />
@@ -54,6 +65,94 @@
         <supports-screens android:xlargeScreens="true" android:largeScreens="true" android:smallScreens="true" />
         <application android:theme="@android:style/Theme.NoTitleBar" >            
         </application>        
-    </gap:config-file>    
+    </gap:config-file> 
+	            
+    <preference name="phonegap-version" value="cli-8.0.0" /> 
+	<preference name="android-build-tool" value="gradle" />
+    <gap:plugin name="cordova-plugin-camera" source="npm" spec="2.4.1" />
+    <gap:plugin name="cordova-plugin-file-transfer" source="npm" spec="1.6.2" /> 
+    <gap:plugin spec="https://github.com/danwilson/google-analytics-plugin.git" source="git" />     
+
+    <platform name="ios">    
+	    <config-file platform="ios" target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+	        <string>Karenderia want to always use your location</string>
+	    </config-file>
+	    <config-file platform="ios" target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+	        <string>Karenderia wants to use your location</string>
+	    </config-file>
+	</platform>   
+	
+	<edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+    <string>need camera access to take pictures</string>
+	</edit-config>
+	
+	<edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+	    <string>need to photo library access to get pictures from there</string>
+	</edit-config>
+	
+	<edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+	    <string>need location access to find things nearby</string>
+	</edit-config>
+	
+	<edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">
+	    <string>need to photo library access to save pictures there</string>
+	</edit-config>
     
+	<platform name="android">
+		
+	    <resource-file src="www/beep.wav" target="res/raw/beep.wav" /> 
+	
+		<icon density="ldpi" src="res/icons/android/drawable-ldpi-icon.png" />
+		<icon density="mdpi" src="res/icons/android/drawable-mdpi-icon.png" />
+		<icon density="hdpi" src="res/icons/android/drawable-hdpi-icon.png" />
+		<icon density="xhdpi" src="res/icons/android/drawable-xhdpi-icon.png" />
+		<icon density="xxhdpi" src="res/icons/android/drawable-xxhdpi-icon.png" />
+		<icon density="xxxhdpi" src="res/icons/android/drawable-xxxhdpi-icon.png" />
+		
+		<splash density="land-ldpi" src="res/screens/android/drawable-land-ldpi-screen.png" />
+		<splash density="land-mdpi" src="res/screens/android/drawable-land-mdpi-screen.png" />
+		<splash density="land-hdpi" src="res/screens/android/drawable-land-hdpi-screen.png" />
+		<splash density="land-xhdpi" src="res/screens/android/drawable-land-xhdpi-screen.png" />
+		<splash density="land-xxhdpi" src="res/screens/android/drawable-land-xxhdpi-screen.png" />
+		<splash density="land-xxxhdpi" src="res/screens/android/drawable-land-xxxhdpi-screen.png" />
+		<splash density="port-ldpi" src="res/screens/android/drawable-port-ldpi-screen.png" />
+		<splash density="port-mdpi" src="res/screens/android/drawable-port-mdpi-screen.png" />
+		<splash density="port-hdpi" src="res/screens/android/drawable-port-hdpi-screen.png" />
+		<splash density="port-xhdpi" src="res/screens/android/drawable-port-xhdpi-screen.png" />
+		<splash density="port-xxhdpi" src="res/screens/android/drawable-port-xxhdpi-screen.png" />
+		<splash density="port-xxxhdpi" src="res/screens/android/drawable-port-xxxhdpi-screen.png" />
+	</platform>
+	
+	<platform name="ios">
+	
+		<icon height="57" platform="ios" src="res/icons/ios/icon.png" width="57" />
+		<icon height="114" platform="ios" src="res/icons/ios/icon@2x.png" width="114" />
+		<icon height="40" platform="ios" src="res/icons/ios/icon-40.png" width="40" />
+		<icon height="80" platform="ios" src="res/icons/ios/icon-40@2x.png" width="80" />
+		<icon height="50" platform="ios" src="res/icons/ios/icon-50.png" width="50" />
+		<icon height="100" platform="ios" src="res/icons/ios/icon-50@2x.png" width="100" />
+		<icon height="60" platform="ios" src="res/icons/ios/icon-60.png" width="60" />
+		<icon height="120" platform="ios" src="res/icons/ios/icon-60@2x.png" width="120" />
+		<icon height="180" platform="ios" src="res/icons/ios/icon-60@3x.png" width="180" />
+		<icon height="72" platform="ios" src="res/icons/ios/icon-72.png" width="72" />
+		<icon height="144" platform="ios" src="res/icons/ios/icon-72@2x.png" width="144" />
+		<icon height="76" platform="ios" src="res/icons/ios/icon-76.png" width="76" />
+		<icon height="152" platform="ios" src="res/icons/ios/icon-76@2x.png" width="152" />
+		<icon height="29" platform="ios" src="res/icons/ios/icon-small.png" width="29" />
+		<icon height="58" platform="ios" src="res/icons/ios/icon-small@2x.png" width="58" />
+		<icon height="87" platform="ios" src="res/icons/ios/icon-small@3x.png" width="87" />
+		
+		<splash height="1136" platform="ios" src="res/screens/ios/Default-568h@2x~iphone.png" width="640" />
+		<splash height="1334" platform="ios" src="res/screens/ios/Default-667h.png" width="750" />
+		<splash height="2208" platform="ios" src="res/screens/ios/Default-736h.png" width="1242" />
+		<splash height="1242" platform="ios" src="res/screens/ios/Default-Landscape-736h.png" width="2208" />
+		<splash height="1536" platform="ios" src="res/screens/ios/Default-Landscape@2x~ipad.png" width="2048" />
+		<splash height="768" platform="ios" src="res/screens/ios/Default-Landscape~ipad.png" width="1024" />
+		<splash height="2048" platform="ios" src="res/screens/ios/Default-Portrait@2x~ipad.png" width="1536" />
+		<splash height="1024" platform="ios" src="res/screens/ios/Default-Portrait~ipad.png" width="768" />
+		<splash height="960" platform="ios" src="res/screens/ios/Default@2x~iphone.png" width="640" />
+		<splash height="480" platform="ios" src="res/screens/ios/Default~iphone.png" width="320" />
+		<splash src="res/screens/ios/Default@2x~universal~anyany.png" />
+	</platform>    
+ 	       
 </widget>

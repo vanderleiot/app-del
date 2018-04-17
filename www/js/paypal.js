@@ -3,8 +3,10 @@ var app_paypal = {
 
    initPaymentUI: function() {
     var clientIDs = {    	
-      "PayPalEnvironmentProduction": $(".client_id_live").val() ,
-      "PayPalEnvironmentSandbox": $(".client_id_sandbox").val()
+      /*"PayPalEnvironmentProduction": $(".client_id_live").val() ,
+      "PayPalEnvironmentSandbox": $(".client_id_sandbox").val()*/
+      "PayPalEnvironmentProduction": $(".client_id").val() ,
+      "PayPalEnvironmentSandbox": $(".client_id").val()
     };
     PayPalMobile.init(clientIDs, app_paypal.onPayPalMobileInit);
   },
