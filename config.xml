@@ -30,7 +30,7 @@
     <preference name="SplashScreenDelay" value="10000" />  
     
     <gap:plugin name="cordova-plugin-googlemaps"  source="npm"  spec="1.3.9">
-	   <param name="API_KEY_FOR_ANDROID" value="AIzaSyDCCDFERbwgroax3mJ8ow_J5KmB5-0axHk" />
+	   <param name="API_KEY_FOR_ANDROID" value="AIzaSyDq_CRXqbPtNUuTQSuxoBg9pVU66v2nD4w" />
 	   <param name="API_KEY_FOR_IOS" value="XXX" />
 	</gap:plugin>	
 	
