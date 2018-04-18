@@ -49,46 +49,23 @@
   <div class="myloader"></div>
 </ons-modal>
 
-
-<ons-navigator title="Navigator" var="kNavigator">
-  <ons-page id="page-login" >
-  
-  <ons-toolbar> 	
-  </ons-toolbar>
-  
-  <div class="home-header">
-      <img src="css/images/banner.png" alt="" title="">
-   </div> 
-   
-   <form id="frm-login" class="frm-login" method="post">       
-         
-   <div class="wrapper">
-      <div class="field-wrapper">
-      <input type="text" name="username"  class="text-input text-input--underbar has_validation" 
-      placeholder="Username" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" data-trn-key="username" >
-      </div>
-
-      <div class="field-wrapper">
-      <input type="password" name="password"  class="password text-input text-input--underbar has_validation" 
-      placeholder="Password" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" data-trn-key="password"  >
-      </div>                    
-   </div>
-   
-   <div class="wrapper">
-	   <button class="button green-btn button--large trn" onclick="login();" data-trn-key="login">
-		Log in		
-	   </button>
-   </div>
-   </form>      
-      
-   <div class="wrapper center">                  
-      <button class="trn button button--quiet green" onclick="showForgotPass();" data-trn-key="forgot_your_pass">
-       Forgot your password?
-       </button>                   
-   </div> 
-  
-</ons-page>
+<ons-navigator id="kSettingsNavigator" page="pageGetSettings.html" var="kNavigator" >
 </ons-navigator> 
+
+<script type="text/ons-template" id="pageGetSettings.html">
+  <ons-page modifier="getsettings" id="page-getsettings">
+
+   <div class="main-getsettings">
+     <img src="css/images/banner.png" alt="" title="">
+     <div class="retry-language center">
+           <button class="button button--quiet green" onclick="getLanguageSettings();">	       
+	         <ons-icon icon="ion-android-refresh" size="30px"></ons-icon>
+	       </button>       
+     </div>
+   </div> 
+  
+  </ons-page>
+</script>
 
 <script type="text/ons-template" id="pageLogin.html">    
 <ons-page id="page-login" >
@@ -119,13 +96,20 @@
 		Log in		
 	   </button>
    </div>
-   </form>      
-      
+   
    <div class="wrapper center">                  
       <button class="trn button button--quiet green" onclick="showForgotPass();" data-trn-key="forgot_your_pass">
        Forgot your password?
        </button>                   
-   </div> 
+   </div>    
+   </form>
+
+   <div class="auto-login-wrap">       
+       <p>
+       <span class="trn" data-trn-key="login_in" >Logging in</span> ...
+       </p>
+   </div>  
+         
   
 </ons-page>
 </script>
@@ -441,10 +425,7 @@
           
      <input type="hidden" name="order_id" id="order_id" class="order_id">
      
-     <div class="field-wrapper">
-      <input type="text" name="delivery_time"  class="delivery_time mobiscroll_time text-input text-input--underbar has_validation" 
-      placeholder="Delivery Time" value="" data-validation="required" data-validation-error-msg="this field is mandatory!" >
-      </div>
+   
       
       <div class="field-wrapper">
       <textarea name="remarks" id="remarks" class="text-input text-input--underbar" rows="3" placeholder="Write a comments..." data-trn-key="write_comments"></textarea>
@@ -1076,7 +1057,7 @@
       <input type="hidden" name="status" id="status" class="status">
                
       <div class="field-wrapper">
-      <textarea name="remarks" id="remarks" class="text-input text-input--underbar" rows="3" placeholder="Write a comments..." data-trn-key="write_comments"></textarea>
+      <textarea name="remarks" id="remarks" class="text-input text-input--underbar write_comments" rows="3" placeholder="Write a comments..." data-trn-key="write_comments"></textarea>
       </div>
      
       <button class="booking-btn trn button green-btn button--large" onclick="bookingChangeStats();" data-trn-key="getting_booking">	    

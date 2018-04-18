@@ -404,7 +404,6 @@ font-size:30px;
 .page-login-fb,
 .voucher-wrap,
 .remove-voucher,
-#page-login,
 .actions-1,
 .actions-2,
 .booking-action,
@@ -930,13 +929,15 @@ background:#f75d34;
 
 .status.cancelled,
 .status.declined,
+.status.decline,
 .status.denied  
 {
 background:#e53935;
 }
 .status.successful,
 .status.paid,
-.status.approved 
+.status.approved,
+.status.delivered 
 {
 background:#2c9f2c;
 }
@@ -976,3 +977,99 @@ margin:0;
 padding:0;
 font-weight:normal;
 }
+
+.page__background.page--getsettings__background
+{
+background:#f75d34;
+}
+
+.page__background.page--page-slidingmenu__background{
+background:rgba(0,0,0,0) !important;
+}
+
+.main-getsettings{
+margin: 40% auto auto;
+max-width: 70%;
+}
+
+.main-getsettings img{
+width:100%;
+height:auto;
+}
+
+.retry-language{
+display:none;
+}
+
+.icon-green{
+font-size:30px;
+}
+
+.auto-login-wrap{
+margin:40px 20px;
+margin-top:100px;
+font-family: 'Open Sans',sans-serif;
+text-align:center;
+font-size: 14px;
+display:none;
+}
+
+
+/*FIXED ORDER LIST CSS*/
+
+.item-order-list,
+.summary-wrap
+{
+margin:auto;
+font-size: 14px;
+padding:0 10px;
+}
+
+.item-order-list {
+border-bottom:1px solid #d8d8d8;
+padding-top:8px;
+}
+.summary-wrap{
+padding-top:8px;
+padding-bottom:8px;
+}
+
+.item-order-list .a,
+.item-order-list .b
+{
+float:left;
+}
+.item-order-list p{
+margin:0;
+}
+
+.item-order-list .a{
+padding-right:8px;
+}
+
+.item-order-list .b.uk-text-success{
+font-weight:bold;
+}
+
+.item-order-list .manage{
+float:right;
+}
+
+.clear{
+clear:both;
+}
+
+.item-order-list .row,
+.summary-wrap .row,
+{
+display:table;
+width:100%;
+}
+.item-order-list .row .col-md-6,
+.summary-wrap .row .col-md-6
+{
+display:table-cell;
+width:50%;
+}
+
+/*FIXED ORDER LIST CSS*/
