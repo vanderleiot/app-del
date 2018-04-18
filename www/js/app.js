@@ -6,7 +6,7 @@ Version 1.0.6
 /**
 Default variable declarations 
 */
-var string = device.version;
+
 var ajax_url= krms_config.ApiUrl ;
 var dialog_title_default= krms_config.DialogDefaultTitle;
 var search_address;
