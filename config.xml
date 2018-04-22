@@ -31,8 +31,8 @@
     <preference name="ShowSplashScreenSpinner" value="false" />	   
     
     <gap:plugin name="cordova-plugin-googlemaps-plus" source="npm" >
-       <param name="API_KEY_FOR_ANDROID" value="AIzaSyCzib-Jy9ppICaDoiS877FrjqtuCZonCc4" />
-       <param name="API_KEY_FOR_IOS" value="AIzaSyBSLzxSEraZZCI6KVXKDjWJ9PBnOIHAIIM" />
+       <param name="API_KEY_FOR_ANDROID" value="AIzaSyDq_CRXqbPtNUuTQSuxoBg9pVU66v2nD4w" />
+       <param name="API_KEY_FOR_IOS" value="AIzaSyDq_CRXqbPtNUuTQSuxoBg9pVU66v2nD4w" />
        <param name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="zoulak wants to use your location" />
        <param name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="zoulak want to always use your location" />
     </gap:plugin>
