@@ -2311,12 +2311,24 @@ function deviceBackButton()
 	  	   //alert(index);
 	  	   // -1: Cancel
            // 0-: Button index from the left           
+<<<<<<< HEAD
 	  	   if (index==0){
 	  	   	   removeStorage("merchant_token");
                removeStorage("merchant_info");
                kNavigator.popPage();
 	  	   }
 	  }
+=======
+	  	  if (index==0){                                                                        
+   		             if (navigator.app) {
+           		        navigator.app.exitApp();
+           		     } else if (navigator.device) {
+           		        navigator.device.exitApp();
+           		     } else {
+          	         window.close();
+          	      }
+             }
+>>>>>>> 6e1356c9211f10f59d8ad5860a86dff1c84e8fa5
 	});
 }
 
