@@ -2,14 +2,14 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schemas.android.com/apk/res/android"
-    id        = "com.zoulak.merchant"
-    version   = "2.5">
-    <name>zoulak Order Taking App</name>
+    id        = "com.vittrine.deliveryadm"
+    version   = "1.0">
+    <name>Adm Delivery</name>
     <description>
-        zoulak Order Taking App
+        Adm Delivery MA
     </description>
-    <author email="bastikikang@gmail.com" href="http://cordova.io">
-        zoulak.com
+    <author email="centralvittrine@gmail.com" href="http://cordova.io">
+        deliveryma.com.br
     </author>
     <icon src="icon.png" />           
     <content src="index.html" />
