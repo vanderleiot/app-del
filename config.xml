@@ -2,19 +2,20 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schemas.android.com/apk/res/android"
-    id        = "com.delivery.merchant"
-    version   = "1.1">
-    <name>zoulak Order Taking App</name>
+    id        = "com.deliveryma.admin"
+    version   = "1.0">
+    <name>Delivery ADM</name>
     <description>
-        zoulak Order Taking App
+        Adim delivery Ma
     </description>
-    <author email="bastikikang@gmail.com" href="http://cordova.io">
-        zoulak.com
+    <author email="centralvittrine@gmail.com" href="http://cordova.io">
+        delivery.com.br
     </author>
     <icon src="icon.png" />           
     <content src="index.html" />
                
 	<preference name="orientation" value="portrait" />
+	<preference name="loadUrlTimeoutValue" value="700000" />
 	<preference name="android-build-tool" value="gradle" />	
 		
 	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
@@ -33,8 +34,8 @@
     <gap:plugin name="cordova-plugin-googlemaps-plus" source="npm" >
        <param name="API_KEY_FOR_ANDROID" value="AIzaSyDq_CRXqbPtNUuTQSuxoBg9pVU66v2nD4w" />
        <param name="API_KEY_FOR_IOS" value="AIzaSyDq_CRXqbPtNUuTQSuxoBg9pVU66v2nD4w" />
-       <param name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="zoulak wants to use your location" />
-       <param name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="zoulak want to always use your location" />
+       <param name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="Delivery quer saber sua localizacao" />
+       <param name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="Delvery Ma quer usar sua localizacao" />
     </gap:plugin>
 	
 	<gap:plugin name="cordova-plugin-media" source="npm" spec="3.0.0" />	
