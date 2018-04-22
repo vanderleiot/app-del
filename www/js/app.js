@@ -2312,9 +2312,12 @@ function deviceBackButton()
 	  	   // -1: Cancel
            // 0-: Button index from the left           
 	  	   if (index==0){
-	  	   	   removeStorage("merchant_token");
-               removeStorage("merchant_info");
-               kNavigator.popPage();
+	  	                if (navigator.app) {
+                   navigator.app.exitApp();
+                } else if (navigator.device) {
+                   navigator.device.exitApp();
+                } else {
+                   window.close();
 	  	   }
 	  }
 	});
