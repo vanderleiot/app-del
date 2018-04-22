@@ -15,7 +15,6 @@
     <content src="index.html" />
                
 	<preference name="orientation" value="portrait" />
-	<preference name="loadUrlTimeoutValue" value="700000" />
 	<preference name="android-build-tool" value="gradle" />	
 		
 	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
