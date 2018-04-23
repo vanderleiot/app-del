@@ -927,28 +927,30 @@ border-radius: 2px;
 background:#f75d34;
 }
 
-.status.cancelled,
+
 .status.declined,
 .status.decline,
-.status.denied  
+.status.denied 
+.status.approved,
+.status.delivered 
 {
-background:#e53935;
+background:#cc66ff;
 }
 .status.successful,
 .status.paid,
-.status.approved,
-.status.delivered 
+ 
 {
 background:#2c9f2c;
 }
 .status.pending
+.status.cancelled
 {
-background:#f75d34;
+background:#e62e00;
 }
 .status.accepted,
 .status.acknowledged
 {
-background:#33a17e ;
+background:#cc66ff;
 }
 .status.started 
 {
