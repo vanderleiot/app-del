@@ -930,7 +930,15 @@ background:#f75d34;
 .status.cancelled,
 .status.declined,
 .status.decline,
+<<<<<<< HEAD
 .status.denied  
+=======
+.status.denied,
+.status.approved,
+.status.delivered,
+.status.embalando,
+.status.preparando,
+>>>>>>> 4967997945cf8f264730ed42343d003087cffe72
 {
 background:#e53935;
 }
@@ -956,7 +964,7 @@ background:#ba68c8;
 }
 .status.inprogress  
 {
-background:#ec391c;
+background:#cc66ff;
 }
 
 .map-bottom-wrapper{
