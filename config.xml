@@ -2,14 +2,14 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schemas.android.com/apk/res/android"
-    id        = "com.vittrine.deliveryadm"
+    id        = "com.azfidelizi.admin"
     version   = "1.0">
-    <name>Adm Delivery</name>
+    <name>Adm AzFidelizi</name>
     <description>
-        Adm Delivery MA
+        Adm AzFidelizi
     </description>
     <author email="centralvittrine@gmail.com" href="http://cordova.io">
-        deliveryma.com.br
+        AzFidelizi.com.br
     </author>
     <icon src="icon.png" />           
     <content src="index.html" />
@@ -33,8 +33,8 @@
     <gap:plugin name="cordova-plugin-googlemaps-plus" source="npm" >
        <param name="API_KEY_FOR_ANDROID" value="AIzaSyDq_CRXqbPtNUuTQSuxoBg9pVU66v2nD4w" />
        <param name="API_KEY_FOR_IOS" value="AIzaSyDq_CRXqbPtNUuTQSuxoBg9pVU66v2nD4w" />
-       <param name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="zoulak wants to use your location" />
-       <param name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="zoulak want to always use your location" />
+       <param name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="use sua localizacao" />
+       <param name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="use sua localizacao" />
     </gap:plugin>
 	
 	<gap:plugin name="cordova-plugin-media" source="npm" spec="3.0.0" />	
@@ -58,10 +58,10 @@
     
      <platform name="ios">    
 	    <config-file platform="ios" target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
-	        <string>zoulak want to always use your location</string>
+	        <string>Qual sua localizacao</string>
 	    </config-file>
 	    <config-file platform="ios" target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
-	        <string>zoulak wants to use your location</string>
+	        <string>Permitir sua localizacao</string>
 	    </config-file>
 	</platform>   
 	    
